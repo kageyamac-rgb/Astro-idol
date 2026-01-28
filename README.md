@@ -3,11 +3,12 @@
 Landing page template for mirco SaaS products
 
 ### Live demo
+
 (https://idol.indiebold.com/)
 
 ### Upgrade to Astrodol Pro version
-(https://idolpro.indiebold.com/)
 
+(https://idolpro.indiebold.com/)
 
 ## 🚀 Project Structure
 
@@ -38,8 +39,8 @@ Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page
 Any static assets, like images, can be placed in the `public/` directory.
 
 ## Preview
-![basics](./src/demo/idol-thumbnail.png)
 
+![basics](./src/demo/idol-thumbnail.png)
 
 ## 🧞 Commands
 
@@ -54,14 +55,9 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-
-
-
-
-
 ## 👀 Curious to Explore More?
 
 Check out [LAB-CH3](https://github.com/LaB-CH3) for a growing collection of current and future templates.
 
 If you’ve found this helpful, consider fueling my creativity!  
-[![Buy me a coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/d2OuR1c)
+[![Buy me a coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://ko-fi.com/indieteamofone)
