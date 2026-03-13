@@ -6,17 +6,27 @@ import Brief from '../components/Brief.astro'
 import Pricing from '../components/Pricing.astro';
 import Customers from '../components/Customers.astro'
 import Footer from '../components/Footer.astro';
+
+// --- microCMSからデータを取得する呪文 ---
+import { createClient } from "microcms-js-sdk";
+const client = createClient({
+  serviceDomain: import.meta.env.MICROCMS_SERVICE_DOMAIN,
+  apiKey: import.meta.env.MICROCMS_API_KEY,
+});
+
+const response = await client.get({ 
+  endpoint: "information",
+  queries: { limit: 5 }
+});
+// ---------------------------------------
 ---
 
-<Layout title="Idol | Micro SaaS landing page">
-	<Header />
-	<Hero />
-	<Brief />
-	<Pricing />
-	<Customers />
-	<Footer />
+<Layout title="鳴滝塾 | 少人数制の学習塾">
+    <Header />
+    {/* 取得したデータをHeroコンポーネントに渡します */}
+    <Hero news={response.contents} />
+    <Brief />
+    <Pricing />
+    <Customers />
+    <Footer />
 </Layout>
-
-<style>
-
-</style>

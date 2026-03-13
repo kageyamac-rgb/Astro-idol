@@ -1,91 +1,377 @@
 ---
-import Bomb from '../assets/bomb.svg'
-import Mailbox from '../assets/mailbox.svg'
-import Folder from '../assets/folder.svg'
-import Savings from '../assets/savings.svg'
-import Gift from '../assets/gift.svg'
+
+import Feat1 from '../assets/etokisansu-lp.png'
+
+import Feat2 from '../assets/chugakujuken-lp.png'
+
+import Feat3 from '../assets/terakoyashiki-lp.png'
+
+import Feat4 from '../assets/testtaisaku-lp.png'
+
+import Feat5 from '../assets/kaikei-lp.png'
+
 ---
 
 
+
+
+
 <section class="product-hero">
+
     <div class="container">
+
         <div class="d-table">
+
             <div class="d-table-cell center">
+
                 <div class="hero-copy">
-                    <h1 class="h1-title">Automate your design process for creative freedom</h1>
-                    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat excepturi dignissimos exercitationem nesciunt, quo quibusdam assums? Architecto, placeat libero. </p>
+
+                    <h1 class="h1-title">一人ひとりを大切にして、考える力をはぐくむ少人数制の学習塾</h1>
+
+                     <h2 class="hero-sub-header">
+
+                     <span class="sub-caption">絵解き算数教室「どんぐり倶楽部準拠教室」</span><br />
+
+                     鳴滝塾
+
+                     </h2>
+
+                   
+
+                    <p class="hero-description">
+
+                    鳴滝塾はリニューアル。新しい3つのコースが始まります。<br />
+
+                    <strong>小5からの中学受験 / 私立中学生コース / 通塾してない高校生</strong><br />
+
+                    移転し新しくなった教室で、考える力を育む時間を共に過ごしましょう。
+
+                    </p>
+
+                   
+
                     <div class="product-cta">
-                      <a href="https://github.com/LaB-CH3/Astro-idol" class="button button-primary u-full-width">Start Trial — It's Free</a>
+
+                    <a href="/contact" class="button button-primary u-full-width">
+
+                    まずは無料体験授業
+
+                    </a>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
         <div class="hero-media">
-            <img src={Bomb.src} alt="Dynamite">
-            <img src={Mailbox.src} alt="Mailbox">
-            <img src={Folder.src} alt="Folder">
-            <img src={Savings.src} alt="Money">
-            <img src={Gift.src} alt="Gift">
+
+        <img src={Feat1.src} alt="強み1">
+
+        <img src={Feat2.src} alt="強み2">
+
+        <img src={Feat3.src} alt="強み3">
+
+        <img src={Feat4.src} alt="強み4">
+
+        <img src={Feat5.src} alt="強み5">
+
         </div>
+
     </div>
+
  </section>
+
+
 
  <style lang="scss">
 
 
-.product-hero{
-  padding: 50px 0;
-  .container{
-    position: relative;
-    .d-table{
-      height: 500px;
-     }
-  }
-  .hero-media{
-    padding: 5px;
-    border-radius: 48px;
-  }
-  .hero-copy{
-    h1, p{
-      max-width: 600px;
-      margin: 20px auto;
+
+.hero-sub-header {
+
+    font-size: 3.8rem;    // 「鳴滝塾」をさらに大きく
+
+    font-weight: 800;
+
+    margin-top: 30px;     // 上のキャッチコピーとの間隔を少し広げて独立させる
+
+    line-height: 1.0;     // 行間を極限まで詰める
+
+    color: #111;
+
+    letter-spacing: -0.02em; // 少し文字の間を詰めて密度を上げる
+
+
+
+    .sub-caption {
+
+      display: block;    
+
+      font-size: 1.8rem;  // ★ここを大きく（前の1.3倍ほど）
+
+      font-weight: 600;   // ★少し太くして視認性をアップ
+
+      color: #444;        // 少しだけ濃い色に
+
+      margin-bottom: -12px; // ★もっとマイナスにして「鳴滝塾」へ引き寄せる
+
+      letter-spacing: 0.05em; // 肩書きは少し広げて読みやすく
+
     }
+
   }
-  .hero-media{
-    img{
+
+
+
+.hero-description {
+
+    font-size: 1.4rem;      // ★1.2から1.4へ。しっかり読める大きさに
+
+    line-height: 1.7;       // 行間も少しだけ広げてゆとりを持たせます
+
+    margin-top: 35px;       // 「鳴滝塾」との間隔を広げて、文章を独立させます
+
+    color: #222;            // 少しだけ濃くして読みやすく
+
+    font-weight: 500;       // 全体的に少しだけ太くします
+
+   
+
+    strong {
+
+      font-size: 1.5rem;    // ★オレンジの強調箇所をさらに一回り大きく
+
+      color: #d35400;      
+
+      font-weight: 800;     // 強調箇所は思いっきり太く
+
+    }
+
+
+
+    @media (max-width: 700px) {
+
+      font-size: 1.1rem;    // スマホでも小さくなりすぎないように調整
+
+     
+
+      strong {
+
+        font-size: 1.2rem;
+
+      }
+
+    }
+
+  }
+
+
+
+.hero-media {
+
+    img {
+
       position: absolute;
-      width: 160px;
-      &:nth-child(1){
+
+      // width: 160px; // 全体共通の指定はコメントアウトするか消します
+
+      height: auto;   // アスペクト比を維持
+
+
+
+      &:nth-child(1) { // 強み1：絵解き算数（左上）
+
         top: 0;
+
         left: -100px;
+
+        width: 180px;  // ★ここでお好みのサイズに！
+
       }
-      &:nth-child(2){
+
+      &:nth-child(2) { // 強み2：個別フォロー（右上）
+
         top: 0;
+
         right: -100px;
+
+        width: 150px;  // ★ここでお好みのサイズに！
+
       }
-      &:nth-child(3){
+
+      &:nth-child(3) { // 強み3（左中段）
+
         top: 250px;
+
         left: 0;
+
+        width: 160px;
+
       }
-      &:nth-child(4){
+
+      &:nth-child(4) { // 強み4（右中段）
+
         top: 250px;
+
         right: 0;
+
+        width: 160px;
+
       }
-      &:nth-child(5){
+
+      &:nth-child(5) { // 強み5（中央下）
+
         bottom: -20px;
+
         left: 50%;
+
         transform: translateX(-50%);
+
+        width: 200px;  // ★真ん中下は少し大きくする、なども自由自在
+
       }
+
     }
+
+
+
+    // スマホ表示での調整（画像が大きすぎると重なるため）
+
     @media (max-width:700px) {
-      img{
-        &:nth-child(2), &:nth-child(3),
-        &:nth-child(4){
-          display: none;
+
+      img {
+
+        &:nth-child(1) { width: 120px; left: -20px; } // スマホ用に小さく
+
+        &:nth-child(5) { width: 140px; }
+
+       
+
+        &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+
+          display: none; // 元のソースの通り、スマホでは一部非表示
+
         }
+
       }
+
     }
+
+  }  
+
+
+
+.product-hero{
+
+  padding: 50px 0;
+
+  .container{
+
+    position: relative;
+
+    .d-table{
+
+      height: 500px;
+
+     }
+
   }
+
+  .hero-media{
+
+    padding: 5px;
+
+    border-radius: 48px;
+
+  }
+
+  .hero-copy{
+
+    h1, p{
+
+      max-width: 600px;
+
+      margin: 20px auto;
+
+    }
+
+  }
+
+  .hero-media{
+
+    img{
+
+      position: absolute;
+
+      width: 160px;
+
+      &:nth-child(1){
+
+        top: 0;
+
+        left: -100px;
+
+      }
+
+      &:nth-child(2){
+
+        top: 0;
+
+        right: -100px;
+
+      }
+
+      &:nth-child(3){
+
+        top: 250px;
+
+        left: 0;
+
+      }
+
+      &:nth-child(4){
+
+        top: 250px;
+
+        right: 0;
+
+      }
+
+      &:nth-child(5){
+
+        bottom: -20px;
+
+        left: 50%;
+
+        transform: translateX(-50%);
+
+      }
+
+    }
+
+    @media (max-width:700px) {
+
+      img{
+
+        &:nth-child(2), &:nth-child(3),
+
+        &:nth-child(4){
+
+          display: none;
+
+        }
+
+      }
+
+    }
+
+  }
+
 }
+
+
 
  </style>
