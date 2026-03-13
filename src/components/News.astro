@@ -1,0 +1,71 @@
+---
+// src/components/News.astro
+// propsの型を定義（microCMSから来るデータの形を教える）
+interface Props {
+  contents: any[];
+}
+
+const { contents } = Astro.props;
+
+// パラメーター 'html' に : string (文字列だよ) と付ける
+const getExcerpt = (html: string) => {
+  const text = html.replace(/<[^>]*>?/gm, ''); 
+  return text.length > 20 ? text.substring(0, 20) + "..." : text;
+};
+---
+
+<section class="news-section">
+  <div class="container">
+    <h2 class="news-heading">最新のお知らせ</h2>
+    <div class="news-grid">
+      {/* (info) に : any (なんでもいいよ) と付ける */}
+      {contents.map((info: any) => (
+        <a href={`/information/${info.id}`} class="news-item">
+          <span class="date">{new Date(info.createdAt).toLocaleDateString('ja-JP')}</span>
+          <h3 class="title">{info.title}</h3>
+          <p class="excerpt">{getExcerpt(info.content)}</p>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .news-section {
+    padding: 60px 0;
+    background: #fdfdfd; // ほんの少しだけ色を変えてセクションを分ける
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .news-heading {
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 40px;
+    color: #d35400;
+    font-weight: bold;
+  }
+  .news-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .news-item {
+    display: block;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    text-decoration: none;
+    transition: transform 0.2s;
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+    .date { color: #999; font-size: 1.2rem; }
+    .title { color: #222; font-size: 1.8rem; margin: 5px 0; font-weight: bold; }
+    .excerpt { color: #666; font-size: 1.4rem; }
+  }
+</style>
