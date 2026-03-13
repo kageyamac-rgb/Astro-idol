@@ -32,40 +32,61 @@ const getExcerpt = (html: string) => {
 
 <style lang="scss">
   .news-section {
-    padding: 60px 0;
-    background: #fdfdfd; // ほんの少しだけ色を変えてセクションを分ける
+    // 上下の余白を大幅にカット (80px → 30px)
+    padding: 30px 0; 
+    background-color: #fff4eb; 
   }
+  
+  .news-heading {
+    text-align: center;
+    font-size: 2.2rem; // 少し小さくしてスッキリ
+    margin-bottom: 20px; // タイトルと記事の間を詰める (50px → 20px)
+    color: #b33e00;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+  }
+
   .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 0 20px;
   }
-  .news-heading {
-    text-align: center;
-    font-size: 2.4rem;
-    margin-bottom: 40px;
-    color: #d35400;
-    font-weight: bold;
-  }
+
   .news-grid {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px; // 記事同士の間隔をさらに詰める (15px → 10px)
   }
+
   .news-item {
     display: block;
-    padding: 20px;
-    background: white;
-    border-radius: 12px;
-    border: 1px solid #eee;
+    padding: 20px 25px; // 記事内の余白も少し詰める
+    background: #ffffff;
+    border-radius: 15px; // 少しコンパクトに
+    border: 2px solid #f9e1d0;
     text-decoration: none;
-    transition: transform 0.2s;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(180, 80, 0, 0.05);
+
     &:hover {
       transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      box-shadow: 0 10px 20px rgba(180, 80, 0, 0.12);
     }
-    .date { color: #999; font-size: 1.2rem; }
-    .title { color: #222; font-size: 1.8rem; margin: 5px 0; font-weight: bold; }
-    .excerpt { color: #666; font-size: 1.4rem; }
+
+    .date { 
+      color: #b38b7a; 
+      font-size: 1.2rem; 
+      font-weight: 700;
+    }
+    .title { 
+      color: #1a1a1a; 
+      font-size: 1.9rem; // 少しだけサイズダウン
+      margin: 2px 0 5px; // タイトル上下の隙間を最小限に
+    }
+    .excerpt { 
+      color: #555; 
+      font-size: 1.4rem;
+      line-height: 1.5;
+    }
   }
 </style>
