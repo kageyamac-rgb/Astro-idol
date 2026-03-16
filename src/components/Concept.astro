@@ -1,11 +1,11 @@
 ---
+const aboutUrl = "/about";
 ---
 <section class="concept-section">
   <div class="container">
     <div class="main-copy">
       <h2>「正解」を覚えるのではなく、「問い」を楽しむ子に。</h2>
-      <p class="lead-text">子供である時間を、奪わない。可能性を、広げるかとが鳴滝塾の願いです。
-      </p>
+      <p class="lead-text">子供である時間を、奪わない。可能性を、広げることが鳴滝塾の願いです。</p>
     </div>
 
     <div class="message-content">
@@ -13,8 +13,9 @@
         10代という二度と戻らない時間は、本来、感性を磨き、豊かな体験を積み重ねるためのものです。
         しかし今、多くの子供たちが「作業」としての受験勉強に追われ、自らじっくりと考える習慣、そして何より大切な「子供時代」を浪費してしまっています。
       </p>
-      
-      <p>鳴滝塾は、そんな教育の現状を変えたいと思い続けています。。</p>
+      <p>
+        鳴滝塾は、そんな教育の現状を変えたいと思い続けています。
+      </p>
     </div>
 
     <div class="target-grid">
@@ -29,7 +30,17 @@
     </div>
 
     <div class="closing-message">
-      <p>「今しかできない体験」と「将来への確かな学力」。<br>鳴滝塾は、その両方をあきらめない学び舎です。</p>
+      <p>「今しかできない体験」と「将来への確かな学力」。鳴滝塾は、その両方をあきらめない学び舎です。</p>
+    </div>
+
+    <div class="link-section">
+      <p class="link-intro">私たちの歩みと、提供している具体的なサポートについて</p>
+      <a href="/about/" class="btn-fancy">
+        <span class="btn-text">鳴滝塾について詳しく</span>
+        <span class="btn-arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </span>
+      </a>
     </div>
   </div>
 </section>
@@ -37,7 +48,7 @@
 <style>
   .concept-section {
     padding: 80px 20px;
-    background-color: #fffaf5; /* 柔らかい暖色系 */
+    background-color: #fffaf5;
     color: #333;
     line-height: 1.8;
   }
@@ -48,7 +59,7 @@
   }
   .main-copy h2 {
     font-size: 2rem;
-    color: #d35400; /* ロゴに近いアクセントカラー */
+    color: #d35400;
     margin-bottom: 1rem;
     font-weight: 700;
   }
@@ -62,6 +73,12 @@
     margin-bottom: 3rem;
     max-width: 700px;
     margin-inline: auto;
+  }
+  .message-content p {
+    margin-bottom: 1.5rem;
+  }
+  .message-content p:last-child {
+    margin-bottom: 0;
   }
   .target-grid {
     display: grid;
@@ -87,9 +104,74 @@
     font-size: 1.1rem;
     border-top: 1px solid #ddd;
     padding-top: 2rem;
+    margin-bottom: 3rem;
   }
+
+  /* リンクボタン */
+  .link-section {
+    text-align: center;
+  }
+  .link-intro {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  .btn-fancy {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 45px;
+    background-color: #d35400;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 0 10px 20px rgba(211, 84, 0, 0.2);
+  }
+  .btn-text {
+    position: relative;
+    z-index: 1;
+    letter-spacing: 0.05em;
+  }
+  .btn-arrow {
+    position: relative;
+    z-index: 1;
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .btn-fancy:hover {
+    background-color: #e67e22;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(211, 84, 0, 0.3);
+  }
+  .btn-fancy:hover .btn-arrow {
+    transform: translateX(8px);
+  }
+  .btn-fancy::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.6s ease;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+  }
+  .btn-fancy:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
   @media (max-width: 768px) {
     .target-grid { grid-template-columns: 1fr; }
-    .sp-only { display: block; }
+    .main-copy h2 { font-size: 1.7rem; }
+    .btn-fancy {
+      width: 100%;
+      box-sizing: border-box;
+      justify-content: center;
+    }
   }
 </style>
