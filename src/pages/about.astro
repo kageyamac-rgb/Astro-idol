@@ -1,0 +1,134 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+// 画像をsrc/assetsに入れている場合は、Imageコンポーネントを推奨します
+---
+
+<Layout title="鳴滝塾について | About Us">
+  <Header />
+  
+  <main class="about-container">
+    <section class="zigzag-section">
+      <div class="content">
+        <span class="sub-title">ABOUT US</span>
+        <h2>鳴滝塾について</h2>
+        <p>尾張旭の地で、長きに渡り学習のサポートを続けています。地域の皆さまとともに、学びと成長の道を歩んでまいりました。地元密着型ではありますが、昔も今も周辺の地域から幅広く通塾していただいています。</p>
+        <p>小学生には絵解き算数教室『どんぐり倶楽部公式準拠教室』を、中学生には寺子屋式の少人数制学習塾を提供。明るい将来のために、ともに子供たちの成長を大学入試までサポートしています。</p>
+        <p>小学生も中高生も少人数制にこだわっています。「ひとり一人しっかり目をかけ、個性にあった成長をサポートする。」ことがこだわりです。</p>
+      </div>
+      <div class="image-area">
+        <img src="/images/pencil.png" alt="鉛筆とノート" />
+      </div>
+    </section>
+
+    <section class="zigzag-section dark-bg reverse">
+      <div class="content">
+        <h2>提供しているもの</h2>
+        <div class="service-list">
+          <p><strong>01-小学生の『どんぐり倶楽部公式準拠教室』</strong><br>絵解きでとける応用問題を提供しています。独自問題も多数あります。</p>
+          <p><strong>02-1年で中学受験</strong><br>学力よりちょっと背伸びをした中学受験をします。全科目をコントロールして無駄なく、ストレス少な目で、中高一貫中学を1年で合格に導きます。</p>
+          <p><strong>03-中学生の地元密着型少人数制学習塾</strong><br>定期テスト対策中心でおこない、内申点重視の愛知県公立高校入試に特化した全科目学習サポートを提供しています。</p>
+          <p><strong>04-高校生の推薦入試、AO入試、一般入試サポート</strong><br>高1の1学期から推薦入試に向け、内申点を上げるための定期テスト対策と、難関校合格を目指す受験生のための綿密な受験対策を実施しています。</p>
+          <p><strong>05-定額制の授業</strong><br>補習だ講習だと言って後から金銭を要求することは致しません。</p>
+        </div>
+      </div>
+      <div class="image-area">
+        <img src="/images/coffee.png" alt="コーヒーとノート" />
+      </div>
+    </section>
+
+    <section class="zigzag-section">
+      <div class="content">
+        <h2>こどもの個性をつぶさない</h2>
+        <p>子供たちは皆、独自の才能を持っています。その柔軟な発想力や創造性は、大人の想像を超えることもあります。</p>
+        <p>勉強とは、ただ学校の授業をこなすことではありません。失敗や成功を通じて、「何をどうするか？」を自ら発見する過程が重要なのです。</p>
+        <p>そのために、一人ひとりの学力、学習ペース、自己発信力に合わせて、「ゆっくり・じっくり・丁寧に」というスタイルで、真の学力を育みます。</p>
+      </div>
+      <div class="image-area">
+        <img src="/images/kodomosainou.png" alt="絵を描く子供たち" />
+      </div>
+    </section>
+
+    <section class="profile-section">
+       <div class="profile-inner">
+          <div class="avatar">
+             <img src="/images/avatar.png" alt="Masanori Kageyama" />
+             <p class="role">MANAGER, TEACHER, DESIGNER</p>
+             <h3>Masanori Kageyama</h3>
+          </div>
+          <div class="bio">
+             <h4>私について</h4>
+             <p>鳴滝塾の経営、講師をやっております。<br>愛知県名古屋市出身、滝高校卒業、名古屋大学工学部卒業<br>過去慶応大学SFCと共同研究<br>10年連続共通テスト受験(センターテスト)</p>
+          </div>
+          <div class="back-btn">
+             <a href="/" class="yellow-btn">戻る</a>
+          </div>
+       </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .about-container {
+    width: 100%;
+    overflow: hidden;
+  }
+  .zigzag-section {
+    display: flex;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    gap: 60px;
+  }
+  .zigzag-section.reverse {
+    flex-direction: row-reverse;
+  }
+  .dark-bg {
+    background-color: #001530; /* スクショの深い紺色 */
+    color: #fff;
+    max-width: 100%;
+    padding-inline: calc((100% - 1100px) / 2 + 20px);
+  }
+  .content { flex: 1; }
+  .image-area { flex: 1; }
+  .image-area img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+  .sub-title { color: #666; font-size: 0.9rem; }
+  h2 { font-size: 2.2rem; margin-bottom: 20px; color: #001530; }
+  .dark-bg h2 { color: #fff; }
+  
+  .profile-section {
+    padding: 80px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .profile-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  .yellow-btn {
+    background: #ffd700;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    .zigzag-section, .zigzag-section.reverse {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style>

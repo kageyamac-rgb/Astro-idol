@@ -1,0 +1,120 @@
+---
+// src/pages/information/[id].astro
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { createClient } from "microcms-js-sdk";
+
+// 1. 全記事のIDを取得して、どのページ（URL）を作るか予約する
+export async function getStaticPaths() {
+  const client = createClient({
+    serviceDomain: import.meta.env.MICROCMS_SERVICE_DOMAIN,
+    apiKey: import.meta.env.MICROCMS_API_KEY,
+  });
+  const res = await client.get({ endpoint: "information" });
+  
+  return res.contents.map((item: any) => ({
+    params: { id: item.id },
+  }));
+}
+
+// 2. パラメータ(URL)を元に、このページで表示するデータを取得
+const { id } = Astro.params;
+
+const client = createClient({
+  serviceDomain: import.meta.env.MICROCMS_SERVICE_DOMAIN,
+  apiKey: import.meta.env.MICROCMS_API_KEY,
+});
+
+// idを元に詳細データを取得
+const article = await client.get({ 
+  endpoint: "information", 
+  contentId: id 
+});
+---
+
+<Layout title={`${article.title} | 鳴滝塾`}>
+  <Header />
+  <main class="post-section">
+    <div class="container">
+      <article class="post-card">
+        <header class="post-header">
+          <p class="post-date">{new Date(article.createdAt).toLocaleDateString('ja-JP')}</p>
+          <h1 class="post-title">{article.title}</h1>
+        </header>
+
+        <div class="post-content" set:html={article.content} />
+
+        <footer class="post-footer">
+          <a href="/" class="button-back">← お知らせ一覧へ戻る</a>
+        </footer>
+      </article>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<style lang="scss">
+  .post-section {
+    padding: 60px 20px;
+    background-color: #fff4eb; 
+    min-height: 80vh;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .post-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    border: 2px solid #f9e1d0;
+    box-shadow: 0 6px 15px rgba(180, 80, 0, 0.08);
+  }
+  .post-header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #fff4eb;
+    padding-bottom: 20px;
+  }
+  .post-date {
+    font-size: 1.4rem;
+    color: #b38b7a;
+    font-weight: 700;
+  }
+  .post-title {
+    font-size: 2.6rem;
+    font-weight: bold;
+    color: #1a1a1a;
+  }
+  .post-content {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: #444;
+    :global(p) { margin-bottom: 2rem; }
+    :global(h2) { 
+      font-size: 2.2rem; 
+      margin: 3rem 0 1.5rem; 
+      padding-left: 15px; 
+      border-left: 6px solid #d35400; 
+      color: #1a1a1a;
+    }
+    :global(img) { max-width: 100%; height: auto; border-radius: 12px; }
+  }
+  .post-footer {
+    margin-top: 50px;
+    text-align: center;
+  }
+  .button-back {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #fff4eb;
+    color: #b33e00;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border: 2px solid #f9e1d0;
+    &:hover { background: #d35400; color: #fff; }
+  }
+</style>
