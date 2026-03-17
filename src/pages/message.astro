@@ -5,9 +5,10 @@ import Footer from '../components/Footer.astro';
 import { Image } from 'astro:assets';
 
 // 画像のインポート
-import coffeeImg from '../assets/coffee.png'; 
-import kodomoImg from '../assets/kodomosainou.png';
-import pencilImg from '../assets/pencil.png';
+import message1Img from '../assets/message1.png'; 
+import message2Img from '../assets/message2.png'; 
+import message3Img from '../assets/message3.png'; 
+import message4Img from '../assets/message4.png'; 
 ---
 
 <Layout title="鳴滝塾について | About Us">
@@ -22,7 +23,7 @@ import pencilImg from '../assets/pencil.png';
         <p>では、学習塾の存在意義とは何でしょうか？</p>
       </div>
       <div class="image-area">
-        <Image src={pencilImg} alt="鉛筆とノート" />
+        <Image src={message1Img} alt="鉛筆とノート" />
       </div>
     </section>
 
@@ -46,7 +47,7 @@ import pencilImg from '../assets/pencil.png';
         </div>
       </div>
       <div class="image-area">
-        <Image src={coffeeImg} alt="コーヒーとノート" />
+        <Image src={message2Img} alt="コーヒーとノート" />
       </div>
     </section>
 
@@ -59,7 +60,7 @@ import pencilImg from '../assets/pencil.png';
         <p>知っていることだけではなく、未知なることと戦う力を子供に対して残したい。そのために鳴滝塾は今も変わらず「絵解き算数」を日々教えています。○○式などといった学習法で得られるような即効性はありません。その代わり、「思い出す力」、「自分で何とかする力」が確実に備わっていきます。</p>
       </div>
       <div class="image-area">
-        <Image src={kodomoImg} alt="絵を描く子供たち" />
+        <Image src={message3Img} alt="絵を描く子供たち" />
       </div>
     </section>
 
@@ -77,7 +78,7 @@ import pencilImg from '../assets/pencil.png';
         </div>
       </div>
       <div class="image-area">
-        <Image src={coffeeImg} alt="コーヒーとノート" />
+        <Image src={message4Img} alt="コーヒーとノート" />
       </div>
     </section>
 
