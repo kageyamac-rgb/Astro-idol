@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
+import Trial from '../components/Trial.astro';
 import News from '../components/News.astro'; // 1. Newsをインポート
 import Concept from '../components/Concept.astro';
 import Brief from '../components/Brief.astro';
@@ -24,7 +25,7 @@ const response = await client.get({
 <Layout title="鳴滝塾 | 少人数制の学習塾">
     <Header />
     <Hero />
-    {/* 2. Heroの外に出して、独立したセクションとして表示 */}
+    <Trial />
     <News contents={response.contents} />
     <Concept /> 
     <Brief />

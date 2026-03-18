@@ -50,16 +50,6 @@ import Feat5 from '../assets/kaikei-lp.png'
 
                    
 
-                    <div class="product-cta">
-
-                    <a href="/contact" class="button button-primary u-full-width">
-
-                    まずは無料体験授業
-
-                    </a>
-
-                    </div>
-
                 </div>
 
             </div>
@@ -372,6 +362,61 @@ import Feat5 from '../assets/kaikei-lp.png'
 
 }
 
+.product-cta {
+  margin: 40px auto;
+  text-align: center; // 中央寄せ
 
+  .btn-hero-trial {
+    display: inline-flex; // 文字幅に合わせる（横に広がらない）
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    
+    // サイズ設定
+    width: auto;
+    min-width: 320px;     // ボタンの存在感を出すための最低幅
+    padding: 18px 45px;
+    
+    // デザイン設定
+    background-color: #d35400; // 鳴滝塾のイメージカラー（オレンジ系）
+    color: #fff;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.4rem;
+    border-radius: 50px;       // カプセル型
+    
+    // 影とアニメーション
+    box-shadow: 0 10px 20px rgba(211, 84, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+
+    .btn-text {
+      position: relative;
+    }
+
+    .btn-arrow {
+      transition: transform 0.4s ease;
+      display: flex;
+      align-items: center;
+    }
+
+    &:hover {
+      background-color: #e67e22; // ホバー時に少し明るく
+      transform: translateY(-3px);
+      box-shadow: 0 15px 30px rgba(211, 84, 0, 0.3);
+      color: #fff; // リンクの色が変わらないように固定
+
+      .btn-arrow {
+        transform: translateX(8px);
+      }
+    }
+
+    @media (max-width: 700px) {
+      width: 100%;       // スマホでは押しやすいように全幅
+      min-width: unset;
+      padding: 15px 20px;
+      font-size: 1.2rem;
+    }
+  }
+}
 
  </style>
