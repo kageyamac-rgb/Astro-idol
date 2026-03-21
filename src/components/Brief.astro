@@ -1,176 +1,124 @@
 ---
-import VectorOne from '../assets/ui-one.svg'
-import VectorTwo from '../assets/ui-two.svg'
-import VectorThree from '../assets/ui-three.svg'
-
-import Check from '../assets/check.svg'
+// 右側のアイコン用
 import Bolt from '../assets/bolt.svg'
 import Money from '../assets/money.svg'
 import Wallet from '../assets/wallet.svg'
 import Secure from '../assets/lock.svg'
-
 ---
 
-
 <section class="product-brief" id="features">
-    <div class="container">
+  <div class="container">
 
-
-        <!-- Feature Two -->
-        <div class="row product-brief-items">
-            <div class="brief-media center one-half column">
-                <img src={VectorTwo.src} class="md-width">
-            </div>
-
-            <div class="brief-tab one-half column">
-                <h3 class="h2-title">Better, together.</h3>
-                <p class="m-paragraph m-margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
-
-                <div class="brief-items">
-                 <div class="row m-margin">
-                    <div class="one-half column feature-grid">
-                        <img src={Bolt.src} alt="Fast connect">
-                        <p class="s-paragraph">Lorem ipsum dolor sit amet, consectetur.</p>
-                    </div>
-                    <div class="one-half column feature-grid">
-                        <img src={Money.src} alt="Money transfer">
-                        <p class="s-paragraph">Lorem ipsum dolor sit amet, consectetur.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="one-half column feature-grid">
-                        <img src={Wallet.src} alt="Digital wallet">
-                        <p class="s-paragraph">Lorem ipsum dolor sit amet, consectetur.</p>
-                    </div>
-                    <div class="one-half column feature-grid">
-                        <img src={Secure.src} alt="Secure connection">
-                        <p class="s-paragraph">Lorem ipsum dolor sit amet, consectetur.</p>
-                    </div>
-                </div>
-              </div>
-            </div>
+    <div class="row product-brief-items" style="display: flex; align-items: center; margin-bottom: 120px;">
+      
+      <div class="one-half column" style="background-color: #1a365d !important; min-height: 480px; display: flex; align-items: center; justify-content: center; padding: 40px; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+        <div style="text-align: center; width: 100%; color: #ffffff !important;">
+          <div style="margin-bottom: 25px; display: flex; align-items: center; justify-content: center; gap: 15px;">
+            <span style="font-size: 4.2rem !important; font-weight: 900 !important; color: #ffffff !important; line-height: 1; letter-spacing: -0.02em;">小学生1年〜6年</span>
+            <span style="font-size: 5.5rem !important; font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', sans-serif; font-weight: bold; color: #ffffff !important; line-height: 1; margin-top: -5px;">›</span>
+          </div>
+          <div style="margin-bottom: 30px;">
+            <p style="font-size: 2.4rem !important; font-weight: bold !important; color: #ffffff !important; margin: 0 0 15px 0; letter-spacing: 0.05em;">考える力を養成する</p>
+            <p style="font-size: 2.8rem !important; font-weight: 800 !important; color: #ffffff !important; background: rgba(255,255,255,0.1); display: inline-block; padding: 5px 20px; border-radius: 50px; margin: 0;">絵解き算数教室</p>
+          </div>
+          <div style="border: 3px solid #ffffff !important; display: inline-block; padding: 15px 45px; margin-top: 10px;">
+            <h3 style="font-size: 3rem !important; font-weight: 900 !important; color: #ffffff !important; margin: 0;">「どんぐり倶楽部」</h3>
+          </div>
         </div>
-   
-        <!-- Feature One -->
-        <div class="row product-brief-items">
-            <div class="brief-tab one-half column">
-                <h3 class="h2-title">Better, together.</h3>
-                <p class="m-paragraph m-margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+      </div>
 
+      <div class="brief-tab one-half column" style="padding-left: 50px;">
+        <h3 class="h2-title" style="font-size: 3.2rem; font-weight: bold; margin-bottom: 20px;">算数の応用問題を絵図を使いながら解きます</h3>
+        <p class="m-paragraph m-margin" style="font-size: 1.1rem; line-height: 1.6; color: #666; margin-bottom: 30px;">
+          絵図を書いて考えることで、子供たちの思考力を引き出し、算数の問題を解く楽しさを体験させます。また、問題をしっかり理解する力をつけて、ほかの教科への読解の相乗効果も期待できます。
+        </p>
 
-               <div class="brief-items">
-                 <div class="row m-margin">
-                    <div class="one-half column feature-grid">
-                        <img src={Bolt.src} alt="Fast connect">
-                        <p class="s-paragraph">Lorem ipsum dolor sit amet, consectetur.</p>
-                    </div>
-                    <div class="one-half column feature-grid">
-                        <img src={Money.src} alt="Money transfer">
-                        <p class="s-paragraph">Lorem ipsum dolor sit amet, consectetur.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="one-half column feature-grid">
-                        <img src={Wallet.src} alt="Digital wallet">
-                        <p class="s-paragraph">Lorem ipsum dolor sit amet, consectetur.</p>
-                    </div>
-                    <div class="one-half column feature-grid">
-                        <img src={Secure.src} alt="Secure connection">
-                        <p class="s-paragraph">Lorem ipsum dolor sit amet, consectetur.</p>
-                    </div>
-                </div>
-              </div>
+        <div class="brief-items">
+          <div class="row m-margin" style="display: flex; margin-bottom: 20px;">
+            <div class="one-half column feature-grid" style="display: flex; align-items: flex-start;">
+              <img src={Bolt.src} style="width: 25px; margin-right: 15px; margin-top: 5px;" alt="Fast">
+              <p class="s-paragraph" style="margin: 0; font-size: 1rem;">真の基礎学力の養成、ゆっくりじっくり考えます</p>
             </div>
-
-            <div class="brief-media center one-half column">
-                <img src={VectorOne.src} class="md-width">
+            <div class="one-half column feature-grid" style="display: flex; align-items: flex-start;">
+              <img src={Bolt.src} style="width: 25px; margin-right: 15px; margin-top: 5px;" alt="Value">
+              <p class="s-paragraph" style="margin: 0; font-size: 1rem;">絵図を書くことで、理解を深めます</p>
             </div>
-        </div>
-
-
-
-     <!-- Feature One -->
-      <div class="row product-brief-items">
-
-        <div class="brief-media center one-half column">
-            <img src={VectorThree.src} class="md-width">
-        </div>
-        
-         <div class="brief-tab one-half column">
-            <h3 class="h2-title">Better, together.</h3>
-            <p class="m-paragraph m-margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
-
-
-            <div class="brief-items">
-                <div class="row m-margin">
-                <div class="one-half column feature-grid">
-                    <img src={Bolt.src} alt="Fast connect">
-                    <p class="s-paragraph">Lorem ipsum dolor sit amet, consectetur.</p>
-                </div>
-                <div class="one-half column feature-grid">
-                    <img src={Money.src} alt="Money transfer">
-                    <p class="s-paragraph">Lorem ipsum dolor sit amet, consectetur.</p>
-                </div>
+          </div>
+          <div class="row" style="display: flex;">
+            <div class="one-half column feature-grid" style="display: flex; align-items: flex-start;">
+              <img src={Wallet.src} style="width: 25px; margin-right: 15px; margin-top: 5px;" alt="Wallet">
+              <p class="s-paragraph" style="margin: 0; font-size: 1rem;">１回１時間/月に４回<br>8,000円<br>１回１時間/月に8回<br>15,000円</p>
             </div>
-            <div class="row">
-                <div class="one-half column feature-grid">
-                    <img src={Wallet.src} alt="Digital wallet">
-                    <p class="s-paragraph">Lorem ipsum dolor sit amet, consectetur.</p>
-                </div>
-                <div class="one-half column feature-grid">
-                    <img src={Secure.src} alt="Secure connection">
-                    <p class="s-paragraph">Lorem ipsum dolor sit amet, consectetur.</p>
-                </div>
+            <div class="one-half column feature-grid" style="display: flex; align-items: flex-start;">
+              <img src={Money.src} style="width: 25px; margin-right: 15px; margin-top: 5px;" alt="Secure">
+              <p class="s-paragraph" style="margin: 0; font-size: 1rem;">入塾金無料</p>
             </div>
           </div>
         </div>
+      </div>
+    </div>
 
+    <div class="row product-brief-items" style="display: flex; align-items: center; margin-bottom: 120px;">
+      
+      <div class="brief-tab one-half column" style="padding-right: 50px;">
+        <h3 class="h2-title" style="font-size: 3.2rem; font-weight: bold; margin-bottom: 20px;">NEW! 短期で私立中学を受験するコースです</h3>
+        <p class="m-paragraph m-margin" style="font-size: 1.1rem; line-height: 1.6; color: #666; margin-bottom: 30px;">
+          大手の塾で朝から晩まで勉強付けは少し苦手、学力にあった学校に合格したい。わからないところを学習したい。短期集中で、無理なく受験対策を行います。早い子は小学生5年生から、ゆっくりは6年生から、基礎から応用まで全科目個人にあった内容で幅広く学びます。
+        </p>
+        <div class="brief-items">
+          <div class="row m-margin" style="display: flex; margin-bottom: 20px;">
+            <div class="one-half column feature-grid" style="display: flex; align-items: flex-start;">
+              <img src={Bolt.src} style="width: 25px; margin-right: 15px; margin-top: 5px;" alt="Fast">
+              <p class="s-paragraph" style="margin: 0; font-size: 1rem;">基礎をおろそかにせず、確実に得点に結びつけます。</p>
+            </div>
+            <div class="one-half column feature-grid" style="display: flex; align-items: flex-start;">
+              <img src={Bolt.src} style="width: 25px; margin-right: 15px; margin-top: 5px;" alt="Value">
+              <p class="s-paragraph" style="margin: 0; font-size: 1rem;">入試科目を目標中学に合わせるため、無駄な学習が減ります。</p>
+            </div>
+          </div>
+          <div class="row" style="display: flex;">
+            <div class="one-half column feature-grid" style="display: flex; align-items: flex-start;">
+              <img src={Wallet.src} style="width: 25px; margin-right: 15px; margin-top: 5px;" alt="Wallet">
+              <p class="s-paragraph" style="margin: 0; font-size: 1rem;">小学５年<br>１回2時間/月に８回<br>24,000円<br>１回2時間/月に４回<br>16,000円</p>
+            </div>
+            <div class="one-half column feature-grid" style="display: flex; align-items: flex-start;">
+              <img src={Wallet.src} style="width: 25px; margin-right: 15px; margin-top: 5px;" alt="Secure">
+              <p class="s-paragraph" style="margin: 0; font-size: 1rem;">小学6年<br>１回2時間/月に～２０回<br>36,000円(定額)<br>５年３月スタート</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="one-half column" style="background-color: #96514d !important; min-height: 480px; display: flex; align-items: center; justify-content: center; padding: 40px; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+        <div style="text-align: center; width: 100%; color: #ffffff !important;">
+          <div style="margin-bottom: 25px; display: flex; align-items: center; justify-content: center; gap: 15px;">
+            <span style="font-size: 5.5rem !important; font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', sans-serif; font-weight: bold; color: #ffffff !important; line-height: 1; margin-top: -5px;">‹</span>
+            <span style="font-size: 4.2rem !important; font-weight: 900 !important; color: #ffffff !important; line-height: 1; letter-spacing: -0.02em;">小学生5年, 6年</span>
+          </div>
+          <div style="margin-bottom: 30px;">
+            <p style="font-size: 2.6rem !important; font-weight: bold !important; color: #ffffff !important; margin: 0;">短期集中で無理なく受験</p>
+          </div>
+          <div style="border: 3px solid #ffffff !important; display: inline-block; padding: 15px 45px; margin-top: 10px;">
+            <h3 style="font-size: 3rem !important; font-weight: 900 !important; color: #ffffff !important; margin: 0;">「中学受験コース」</h3>
+          </div>
+        </div>
       </div>
 
     </div>
- </section>
+  </div>
+</section>
 
-
- <style lang="scss">
-
-.product-brief{
-  background-color: var(--tenary);
-  .hero-brand{
-    padding-bottom: 50px;
-    .brands{
-      margin-top: 15px;
-    }
+<style>
+  .product-brief { background-color: var(--tenary); padding: 80px 0; }
+  
+  /* スマホ対応：タイルを常に上、説明を下に */
+  @media (max-width: 768px) {
+    .row.product-brief-items { flex-direction: column !important; margin-bottom: 60px !important; }
+    .row.product-brief-items:nth-child(2) { flex-direction: column-reverse !important; }
+    .one-half.column { width: 100% !important; margin: 0 0 20px 0 !important; padding: 0 !important; }
+    .brief-tab { padding: 20px 15px !important; }
+    /* スマホでタイルのフォントを少し小さく */
+    span[style*="font-size: 4.2rem"] { font-size: 2.8rem !important; }
+    span[style*="font-size: 5.5rem"] { font-size: 3.8rem !important; }
   }
-  .product-brief-items{
-    margin-bottom: 100px;
-    .brief-tab{
-      padding-top: 50px;
-    }
-  }
-
-  .feature-grid{
-    display: flex;
-    p{
-      margin: 0 0 0 10px;
-    }
-    img{
-      width: 25px;
-      margin-top: -10px;
-    }
-  }
-
-  .brief-media{
-    height: 340px;
-    position: relative;
-    overflow: hidden;
-    background-color: #f2f5f9;
-    padding-top: 40px;
-  }
-
-  @media (max-width:700px) {
-    .brief-tab{
-        margin-left: 20px;
-    }
-  }
-}
- </style>
+</style>
