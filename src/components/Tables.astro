@@ -1,207 +1,137 @@
-<section class="timetable-section" id="timetable">
-  <div class="container">
-    <div class="center-title">
-      <span class="sub-title">SYSTEM & SCHEDULE</span>
-      <h2 class="section-title">どんぐり倶楽部の授業システム</h2>
+<section class="nj-system-section" id="timetable" style="padding: 100px 20px; background-color: #fcfcfc;">
+  <div class="nj-container" style="max-width: 1000px; margin: 0 auto;">
+    
+    <div class="nj-center-title" style="text-align: center; margin-bottom: 80px;">
+      <span class="nj-sub-title" style="color: #d35400; font-size: 0.9rem; font-weight: bold; letter-spacing: 0.2em; display: block;">SYSTEM & SCHEDULE</span>
+      <h2 class="nj-section-title" style="font-size: 2.2rem; color: #001530; font-weight: 800; margin-top: 10px;">コース別スケジュール・時間帯</h2>
     </div>
 
-    <div class="system-intro">
-      <div class="system-item">
-        <h3><span class="num">01</span> 開始時間は自由</h3>
-        <p>平日は17:00以降、お子様の都合の良いタイミングで学習をスタートできます。部活動や他の習い事との調整がしやすいフレックス制です。</p>
+    <div class="nj-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; align-items: stretch;">
+      
+      <div class="nj-column" style="border: 3px solid #d35400; background-color: #fffbf8; padding: 50px 15px 35px; border-radius: 24px; position: relative; display: flex; flex-direction: column; height: 100%;">
+        <div class="nj-column-tag" style="position: absolute; top: -14px; left: 18px; padding: 4px 10px; border-radius: 4px; font-size: 0.65rem; font-weight: 900; color: #fff; background: #d35400;">ELEMENTARY</div>
+        
+        <div class="nj-content-inner" style="flex-grow: 1;">
+          <h3 class="nj-category-title" style="font-size: 1.8rem; font-weight: 800; color: #001530; margin-bottom: 30px; text-align: center;">小学生<span style="font-size: 0.85rem; font-weight: 500; opacity: 0.7;">のスケジュール</span></h3>
+          
+          <div class="nj-items-wrap">
+            <div class="nj-course-header" style="margin-bottom: 15px;">
+              <span style="display: block; font-size: 0.8rem; color: #666; font-weight: bold; margin-bottom: 3px;">絵解き算数 (小1〜6)</span>
+              <span style="display: block; font-size: 1.3rem; font-weight: 900; color: #1a365d; line-height: 1.2;">どんぐり倶楽部</span>
+            </div>
+            
+            <div class="nj-info-block" style="padding: 20px 15px; border-radius: 18px; border: 3px dotted #a5c3f3; background: #fff; margin-bottom: 30px;">
+              <div class="nj-time-row" style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
+                <span style="background: #1a365d; color: #fff; font-size: 0.65rem; padding: 2px 5px; border-radius: 4px; font-weight: 900;">フ</span>
+                <span style="font-weight: 800; font-size: 0.95rem; color: #333;">月火水金</span>
+                <span style="color: #d35400; font-weight: 800; font-size: 1.2rem;">17:00 - 19:00</span>
+                <span style="font-size: 0.8rem; color: #666; font-weight: bold;">(内1h)</span>
+              </div>
+              <div class="nj-time-row" style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
+                <span style="background: #1a365d; color: #fff; font-size: 0.65rem; padding: 2px 5px; border-radius: 4px; font-weight: 900;">固</span>
+                <span style="font-weight: 800; font-size: 0.95rem; color: #333;">土曜日</span>
+                <span style="color: #d35400; font-weight: 800; font-size: 1.2rem;">10:00 / 11:00</span>
+                <span style="font-size: 0.8rem; color: #666; font-weight: bold;">(各1h)</span>
+              </div>
+              <ul class="nj-rule-list" style="margin: 15px 0 0 0; padding: 12px 0 0 0; list-style: none; border-top: 1.2px solid rgba(0,0,0,0.06);">
+                <li style="font-size: 0.85rem; color: #444; font-weight: 700; margin-bottom: 4px; padding-left: 15px; position: relative;">開始自由・基本1時間</li>
+                <li style="font-size: 0.85rem; color: #d35400; font-weight: 700; margin-bottom: 4px; padding-left: 15px; position: relative;">19:00 完全終了 (延長不可)</li>
+              </ul>
+            </div>
+
+            <div class="nj-course-header" style="margin-bottom: 15px; margin-top: 35px;">
+              <span style="display: block; font-size: 0.8rem; color: #666; font-weight: bold; margin-bottom: 3px;">小5,6</span>
+              <span style="display: block; font-size: 1.3rem; font-weight: 900; color: #1a365d; line-height: 1.2;">中学受験コース</span>
+            </div>
+            <div class="nj-info-block" style="padding: 20px 15px; border-radius: 18px; border: 3px dotted #ffccb3; background: #fff;">
+              <div style="font-size: 0.85rem; font-weight: 800; color: #1a365d; margin-bottom: 15px; background: rgba(26, 54, 93, 0.05); padding: 6px 8px; border-radius: 6px; text-align: center;">
+                月火水金 17:00-19:00 / 土 10:00-12:00
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <span style="font-weight: 900; font-size: 1.1rem; color: #001530;">小6</span>
+                <span style="color: #d35400; font-weight: 800; font-size: 1.2rem;">週 3 〜 5 コマ</span>
+                <span style="font-size: 0.9rem; font-weight: 700; color: #666;">(定額)</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <span style="font-weight: 900; font-size: 1.1rem; color: #001530;">小5</span>
+                <span style="color: #d35400; font-weight: 800; font-size: 1.2rem;">週 1 or 2 コマ</span>
+                <span style="font-size: 0.9rem; font-weight: 700; color: #666;">選択</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+      <div class="nj-column nj-featured" style="border: 3px solid #001530; background-color: #f4f7f9; padding: 50px 15px 35px; border-radius: 24px; position: relative; display: flex; flex-direction: column; height: 100%; transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,0,0,0.06);">
+        <div class="nj-column-tag" style="position: absolute; top: -14px; left: 18px; padding: 4px 10px; border-radius: 4px; font-size: 0.65rem; font-weight: 900; color: #fff; background: #001530;">JUNIOR HIGH</div>
+        
+        <div class="nj-content-inner" style="flex-grow: 1;">
+          <h3 class="nj-category-title" style="font-size: 1.8rem; font-weight: 800; color: #001530; margin-bottom: 30px; text-align: center;">中学生<span style="font-size: 0.85rem; font-weight: 500; opacity: 0.7;">のスケジュール</span></h3>
+          
+          <div class="nj-items-wrap">
+            <div class="nj-course-header" style="margin-bottom: 15px;">
+              <span style="display: block; font-size: 0.8rem; color: #666; font-weight: bold; margin-bottom: 3px;">五教科対応</span>
+              <span style="display: block; font-size: 1.3rem; font-weight: 900; color: #1a365d; line-height: 1.2;">寺子屋式学習</span>
+            </div>
+            <div class="nj-info-block" style="padding: 20px 15px; border-radius: 18px; border: 3px dotted #ced4da; background: #fff;">
+              <div class="nj-time-row" style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                <span style="font-weight: 800; font-size: 0.95rem; color: #333;">月 〜 金</span>
+                <span style="color: #d35400; font-weight: 800; font-size: 1.2rem;">19:15 - 21:15</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-weight: 900; font-size: 1.1rem; color: #001530;">中1〜3</span>
+                <span style="color: #d35400; font-weight: 800; font-size: 1.2rem;">週 2 回</span>
+                <span style="font-size: 0.9rem; font-weight: 700; color: #666;">(1回2h)</span>
+              </div>
+            </div>
 
-      <div class="system-item">
-        <h3><span class="num">02</span> 基本は1時間</h3>
-        <p>授業時間は「集中力が研ぎ澄まされる1時間」が基本です。自分のペースでじっくりと絵図を描き、思考を深めます。</p>
+            <div class="nj-course-header" style="margin-bottom: 15px; margin-top: 35px;">
+              <span style="display: block; font-size: 0.8rem; color: #666; font-weight: bold; margin-bottom: 3px;">中学1年〜3年</span>
+              <span style="display: block; font-size: 1.3rem; font-weight: 900; color: #1a365d; line-height: 1.2;">私立中学サポート</span>
+            </div>
+            <div class="nj-info-block" style="padding: 20px 15px; border-radius: 18px; border: 3px dotted #ced4da; background: #fff;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-weight: 900; font-size: 1.1rem; color: #001530;">全学年</span>
+                <span style="color: #d35400; font-weight: 800; font-size: 1.2rem;">週 2 回</span>
+                <span style="font-size: 0.9rem; font-weight: 700; color: #666;">(1回2h)</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div class="system-item highlight">
-        <h3><span class="num alert">!</span> 19:00 完全終了</h3>
-        <p>いかなる場合も<strong>19:00以降の延長はできません。</strong>18:00以降に開始された場合は、残り時間に関わらず19:00で終了となります。</p>
+      <div class="nj-column" style="border: 3px solid #bdc3c7; background-color: #f9f9f9; padding: 50px 15px 35px; border-radius: 24px; position: relative; display: flex; flex-direction: column; height: 100%;">
+        <div class="nj-column-tag" style="position: absolute; top: -14px; left: 18px; padding: 4px 10px; border-radius: 4px; font-size: 0.65rem; font-weight: 900; color: #fff; background: #7f8c8d;">HIGH SCHOOL</div>
+        
+        <div class="nj-content-inner" style="flex-grow: 1;">
+          <h3 class="nj-category-title" style="font-size: 1.8rem; font-weight: 800; color: #001530; margin-bottom: 30px; text-align: center;">高校生<span style="font-size: 0.85rem; font-weight: 500; opacity: 0.7;">のスケジュール</span></h3>
+          
+          <div class="nj-items-wrap">
+            <div class="nj-course-header" style="margin-bottom: 15px;">
+              <span style="display: block; font-size: 0.8rem; color: #666; font-weight: bold; margin-bottom: 3px;">内申・推薦・受験指導対応</span>
+              <span style="display: block; font-size: 1.3rem; font-weight: 900; color: #1a365d; line-height: 1.2;">個別学習</span>
+            </div>
+            <div class="nj-info-block" style="padding: 20px 15px; border-radius: 18px; border: 3px dotted #e9ecef; background: #fff;">
+              <div class="nj-time-row" style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                <span style="font-weight: 800; font-size: 0.95rem; color: #333;">月 〜 金</span>
+                <span style="color: #d35400; font-weight: 800; font-size: 1.2rem;">19:15 - 21:15</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-weight: 900; font-size: 1.1rem; color: #001530;">高1〜3</span>
+                <span style="color: #d35400; font-weight: 800; font-size: 1.2rem;">週 2 回</span>
+                <span style="font-size: 0.9rem; font-weight: 700; color: #666;">(1回2h)</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <div class="timetable-wrapper">
-      <table class="schedule-table">
-        <thead>
-          <tr>
-            <th class="time-col">時間帯</th>
-            <th>月</th>
-            <th>火</th>
-            <th>水</th>
-            <th>木</th>
-            <th>金</th>
-            <th class="sat">土</th>
-            <th>日</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="time-label">10:00 - 11:00</td>
-            <td class="cell-off">×</td>
-            <td class="cell-off">×</td>
-            <td class="cell-off">×</td>
-            <td class="cell-off">×</td>
-            <td class="cell-off">×</td>
-            <td class="cell-fixed">固</td>
-            <td class="cell-off">×</td>
-          </tr>
-          <tr>
-            <td class="time-label">11:00 - 12:00</td>
-            <td class="closed">×</td>
-            <td class="closed">×</td>
-            <td class="closed">×</td>
-            <td class="closed">×</td>
-            <td class="closed">×</td>
-            <td class="cell-fixed">固</td>
-            <td class="closed">×</td>
-          </tr>
-          <tr>
-            <td class="time-label">17:00 - 19:00</td>
-            <td class="cell-flex">フ</td>
-            <td class="cell-flex">フ</td>
-            <td class="cell-flex">フ</td>
-            <td class="cell-off">×</td>
-            <td class="cell-flex">フ</td>
-            <td class="cell-off">×</td>
-            <td class="cell-off">×</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <div class="legend">
-        <span><strong class="legend-f">フ</strong> … フレックス（17:00〜19:00の間で1時間）</span>
-        <span><strong class="legend-k">固</strong> … 固定枠（土曜日のみ）</span>
-        <span><strong>×</strong> … お休み</span>
       </div>
-    </div>
-
-    <p class="final-caution">※平日は18:00を過ぎて入室された場合も、19:00には一斉終了となります。</p>
   </div>
 </section>
 
-<style lang="scss">
-  .timetable-section {
-    padding: 80px 20px;
-    background-color: #ffffff;
-    .container { max-width: 1000px; margin: 0 auto; }
-  }
-
-  .center-title {
-    text-align: center;
-    margin-bottom: 50px;
-    .sub-title { color: #1a365d; font-weight: bold; font-size: 0.9rem; letter-spacing: 0.1em; }
-    .section-title { font-size: 2rem; color: #001530; margin-top: 10px; font-weight: 800; }
-  }
-
-  /* システム説明 */
-  .system-intro {
-    margin-bottom: 50px;
-    .system-item {
-      margin-bottom: 25px;
-      h3 {
-        font-size: 1.25rem;
-        font-weight: 800;
-        color: #1a365d;
-        display: block;
-        margin-bottom: 8px;
-        .num {
-          font-size: 1rem;
-          color: #aaa;
-          margin-right: 12px;
-          font-family: serif;
-          &.alert { color: #d35400; font-weight: 900; }
-        }
-      }
-      p { font-size: 1rem; line-height: 1.6; color: #555; margin-left: 38px; }
-      &.highlight { h3, strong { color: #d35400; } }
-    }
-  }
-
-  /* タイムテーブル本体 */
-  .timetable-wrapper {
-    width: 85%;
-    margin: 0 auto 30px;
-    @media (max-width: 1000px) { width: 100%; }
-  }
-
-  .schedule-table {
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
-    border: 1px solid #ddd;
-
-    th, td {
-      border: 1px solid #ddd;
-      text-align: center;
-      padding: 15px 5px;
-      height: 70px;
-      vertical-align: middle;
-    }
-
-    thead th {
-      background-color: #1a365d;
-      color: #fff;
-      font-size: 1rem;
-      height: 50px;
-      &.time-col { background-color: #f4f7f9; color: #1a365d; width: 160px; font-weight: bold; }
-      &.sat { background-color: #2c3e50; }
-    }
-
-    .time-label {
-      background-color: #fcfcfc;
-      font-weight: bold;
-      font-size: 0.85rem;
-      color: #1a365d;
-    }
-
-    /* 記号セルの色付け */
-    .cell-flex {
-      background-color: #eef5ff; // どんぐりの青系（薄く）
-      color: #1a365d;
-      font-size: 1.8rem;
-      font-weight: 900;
-    }
-    .cell-fixed {
-      background-color: #fff2f2; // 中学受験のあずき系（薄く）
-      color: #96514d;
-      font-size: 1.8rem;
-      font-weight: 900;
-    }
-    .cell-off, .closed {
-      color: #ddd;
-      font-size: 1.3rem;
-      background-color: #fafafa;
-    }
-  }
-
-  .legend {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin-top: 25px;
-    font-size: 0.9rem;
-    color: #666;
-    .legend-f { color: #1a365d; background: #eef5ff; padding: 2px 6px; border-radius: 3px; }
-    .legend-k { color: #96514d; background: #fff2f2; padding: 2px 6px; border-radius: 3px; }
-  }
-
-  .final-caution {
-    text-align: center;
-    font-size: 0.9rem;
-    color: #d35400;
-    font-weight: bold;
-    margin-top: 20px;
-  }
-
-  @media (max-width: 768px) {
-    .schedule-table {
-      th, td { padding: 8px 2px; font-size: 0.75rem; height: 50px; }
-      .cell-flex, .cell-fixed { font-size: 1.2rem; }
-      .time-col { width: 90px; }
-    }
-    .system-item p { margin-left: 0; }
-    .legend { flex-direction: column; align-items: center; gap: 10px; }
+<style>
+  /* モバイル対応のみstyleタグに記述 */
+  @media (max-width: 950px) {
+    .nj-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+    div[style*="transform: translateY(-10px)"] { transform: none !important; }
+    .nj-column { padding: 40px 15px 30px !important; }
   }
 </style>
