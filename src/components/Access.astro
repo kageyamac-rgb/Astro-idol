@@ -1,0 +1,156 @@
+---
+// Googleマップの埋め込みURL（後ほど実際の塾の場所に書き換えてください）
+const mapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3259.6605438923266!2d137.05125669999998!3d35.2149235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60036fccc055c229%3A0xe83455a7106582d!2z6aKo44Gu44G-44Gh6auY562J5a2m6ZmiIOWwvuW8teaXreagoQ!5e0!3m2!1sja!2sjp!4v1774192132648!5m2!1sja!2sjp";
+---
+
+<section class="access-section" id="access">
+  <div class="container">
+    <h2 class="access-title">アクセス</h2>
+    
+    <div class="row access-row">
+      <div class="one-half column info-area">
+        <div class="access-card">
+          <h3 class="juku-name">鳴滝塾（なるたきじゅく）</h3>
+          <p class="address">
+            <span class="icon">📍</span> 〒486-0066<br>
+            愛知県尾張旭市南原山町赤土319-15 <br>第一サクセスビル 3F(風のまち高等学院)
+          </p>
+          
+          <div class="access-detail">
+            <h4>【最寄り駅からのアクセス】</h4>
+            <p>名鉄瀬戸線「三郷駅」より徒歩<strong>5分</strong></p>
+            <p class="note">シーナシーナ方向へ曲がる交差点のビルです。</p>
+          </div>
+
+          <div class="access-detail">
+            <h4>【駐輪場・駐車場】</h4>
+            <p><strong>駐輪場：</strong> 1階のシーナシーナ側に駐輪してください。</p>
+            <p><strong>駐車場：</strong> 専用駐車場はございませんが、近隣にコインパーキングが多数ございます。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="one-half column map-area">
+        <div class="map-container">
+          <iframe 
+            src={mapUrl} 
+            width="100%" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <div class="google-maps-link">
+          <a href="https://maps.app.goo.gl/wqAK8m2jvNCGHQLe6" target="_blank" rel="noopener noreferrer" class="external-link">
+            ➔ 大きな地図で見る（Google Mapsアプリが開きます）
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .access-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+  }
+
+  .access-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #001530;
+    margin-bottom: 50px;
+    font-weight: 800;
+  }
+
+  .access-row {
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .access-card {
+    background: #f4f7f9;
+    padding: 40px;
+    border-radius: 20px;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  .juku-name {
+    font-size: 1.6rem;
+    color: #001530;
+    margin-bottom: 20px;
+    font-weight: 800;
+  }
+
+  .address {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+
+  .access-detail {
+    margin-bottom: 25px;
+  }
+
+  .access-detail h4 {
+    font-size: 1rem;
+    color: #d35400; /* 鳴滝オレンジ */
+    margin-bottom: 10px;
+    font-weight: 800;
+  }
+
+  .access-detail p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .note {
+    margin-top: 8px !important;
+    font-size: 0.85rem !important;
+    color: #666;
+  }
+
+  /* マップエリア */
+  .map-container {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    line-height: 0;
+  }
+
+  .google-maps-link {
+    margin-top: 15px;
+    text-align: right;
+  }
+
+  .external-link {
+    font-size: 0.9rem;
+    color: #001530;
+    text-decoration: underline;
+    font-weight: 600;
+  }
+
+  /* スマホ対応 */
+  @media (max-width: 768px) {
+    .access-row {
+      flex-direction: column;
+    }
+    .one-half.column {
+      width: 100% !important;
+      margin-left: 0 !important;
+    }
+    .map-area {
+      margin-top: 30px;
+    }
+    .map-container iframe {
+      height: 300px;
+    }
+  }
+</style>
