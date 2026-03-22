@@ -1,3 +1,11 @@
+---
+// 1. 画像のインポート（パスがプロジェクトに合わせて正しいか確認してください）
+import Bolt from '../assets/bolt.svg'
+import Money from '../assets/money.svg'
+import Wallet from '../assets/wallet.svg'
+import Secure from '../assets/lock.svg'
+---
+
 <section class="nj-system-section" id="timetable">
   <div class="nj-container">
     
@@ -33,15 +41,15 @@
                 <span class="nj-note">(各1h)</span>
               </div>
               <ul class="nj-rule-list">
-                <li>平日はフレックス制。17:00以降、お子様の都合の良いタイミングでスタート。他の習い事とも調整しやすい仕組み。</li>
+                <li>平日はフレックス制。お子様の都合の良いタイミングでスタート。</li>
                 <li>土曜は時間固定制です。</li>
-                <li class="nj-alert">18:00以降に開始された場合も、残り時間に関わらず19:00終了となります。</li>
+                <li class="nj-alert">18:00以降開始でも、19:00終了となります。</li>
               </ul>
             </div>
 
             <div class="nj-course-header nj-mt-offset">
               <span class="nj-course-label">小5,6</span>
-              <span class="nj-course-name">中学受験コース(1コマ２時間)</span>
+              <span class="nj-course-name">中学受験コース(1コマ2時間)</span>
             </div>
             <div class="nj-info-block nj-dot-red">
               <div class="nj-common-time-badge">
@@ -52,18 +60,8 @@
                 <span class="nj-time-text">週 3 〜 5 コマ</span>
                 <span class="nj-unit">(定額)</span>
               </div>
-               <ul class="nj-rule-list">
-                <li>いよいよ受験学年となる小6生。学習量を増やしたい時、追加料金を気にする必要はありません。週3コマでも5コマでも授業料は同じ。納得いくまで、とことん「考える時間」を確保してください。</li>
-                <li class="nj-alert">19:00終了となります。</li>
-              </ul><br>
-              <div class="nj-grade-row">
-                <span class="nj-grade-label">小5</span>
-                <span class="nj-time-text">週 1 or 2 コマ</span>
-                <span class="nj-unit">選択</span>
-              </div>
-               <ul class="nj-rule-list">
-                <li>小5のうちは、まだ他の習い事も大切にしたい時期。ライフスタイルに合わせて通塾日を自由に選べます。「忙しいから受験を諦める」必要はありません。</li>
-                <li class="nj-alert">19:00終了となります。</li>
+              <ul class="nj-rule-list">
+                <li>追加料金なしで週3〜5回通塾可能。とことん学習時間を確保。</li>
               </ul>
             </div>
           </div>
@@ -74,59 +72,32 @@
         <div class="nj-column-tag">JUNIOR HIGH</div>
         <div class="nj-content-inner">
           <h3 class="nj-category-title">中学生<span>のスケジュール</span></h3>
-          
           <div class="nj-items-wrap">
             <div class="nj-course-header">
               <span class="nj-course-label">五教科対応</span>
               <span class="nj-course-name">寺子屋式学習</span>
             </div>
             <div class="nj-info-block nj-dot-dark">
-              <div class="nj-time-row">
-                <span class="nj-grade-label">新中1</span>
-                <span class="nj-days">水、土</span>
-                <span class="nj-time-text">19:30 - 21:30</span>
-              </div>
-              <div class="nj-time-row">
-                <span class="nj-grade-label">新中2</span>
-                <span class="nj-days">月、金</span>
-                <span class="nj-time-text">19:30 - 21:30</span>
-              </div>
-              <div class="nj-time-row">
-                <span class="nj-grade-label">新中3</span>
-                <span class="nj-days">火</span>
-                <span class="nj-time-text">19:30 - 20:00</span>
-                <span class="nj-days">土</span>
-                <span class="nj-time-text">17:00 - 19:30</span>
-              </div>
-              <ul class="nj-rule-list">
-                <li>テスト前無料補習あり。</li>
-              </ul>
+              <div class="nj-time-row"><span class="nj-grade-label">新中1</span><span class="nj-days">水、土</span><span class="nj-time-text">19:30 - 21:30</span></div>
+              <div class="nj-time-row"><span class="nj-grade-label">新中2</span><span class="nj-days">月、金</span><span class="nj-time-text">19:30 - 21:30</span></div>
+              <div class="nj-time-row"><span class="nj-grade-label">新中3</span><span class="nj-days">火土</span><span class="nj-time-text">19:30 - 21:30</span></div>
             </div>
 
             <div class="nj-course-header nj-mt-offset">
               <span class="nj-course-label">中学1年〜3年</span>
               <span class="nj-course-name">私立中学サポート</span>
             </div>
-            
             <div class="nj-info-block nj-dot-dark">
               <div class="nj-grade-row">
                 <span class="nj-grade-label">全学年</span>
-                <span class="nj-time-text">週 2 回, 1回2時間</span>
-                </span>
+                <span class="nj-time-text">週 2 回 (1回2h)</span>
               </div>
               <div class="nj-time-row">
                 <span class="nj-tag-icon">フ</span>
                 <span class="nj-days">月火水金土</span>
                 <span class="nj-time-text">17:00 - 22:00</span>
-                <span class="nj-note">(内2時間)</span>
               </div>
-              <ul class="nj-rule-list">
-                <li>フレックス制。17:00以降、お子様の都合の良いタイミングでスタート。遠い私学、近い私学とも調整しやすい仕組み。</li>
-                <li>テスト前２週間、無料補習があり。</li>
-                <li class="nj-alert">22:00終了となります。</li>
-              </ul>
             </div>
-
           </div>
         </div>
       </div>
@@ -135,26 +106,20 @@
         <div class="nj-column-tag">HIGH SCHOOL</div>
         <div class="nj-content-inner">
           <h3 class="nj-category-title">高校生<span>のスケジュール</span></h3>
-          
           <div class="nj-items-wrap">
             <div class="nj-course-header">
-              <span class="nj-course-label">内申・推薦・受験指導対応</span>
+              <span class="nj-course-label">推薦・受験指導対応</span>
               <span class="nj-course-name">高校別サポート</span>
             </div>
             <div class="nj-info-block nj-dot-gray">
-              <div class="nj-time-row">
-                <span class="nj-days">月 〜 金</span>
-                <span class="nj-time-text">19:15 - 21:15</span>
-              </div>
+              <div class="nj-time-row"><span class="nj-days">月 〜 金</span><span class="nj-time-text">19:15 - 21:15</span></div>
               <div class="nj-grade-row">
                 <span class="nj-grade-label">高1〜3</span>
                 <span class="nj-time-text">週 2 回</span>
                 <span class="nj-unit">(1回2h)</span>
               </div>
               <ul class="nj-rule-list">
-                <li>フレックス制。17:00以降、お子様の都合の良いタイミングでスタート。遠い私学、近い私学とも調整しやすい仕組み。</li>
-                <li>テスト前２週間、無料補習があり。</li>
-                <li class="nj-alert">22:00終了となります。</li>
+                <li>フレックス制。22:00まで対応。</li>
               </ul>
             </div>
           </div>
@@ -166,7 +131,7 @@
 </section>
 
 <style>
-  /* 色の管理（CSS変数） */
+  /* 色の管理 */
   :root {
     --nj-orange: #d35400;
     --nj-navy: #001530;
@@ -174,49 +139,36 @@
     --nj-bg-light: #fcfcfc;
   }
 
-  /* セクション全体 */
   .nj-system-section {
     padding: 120px 20px;
     background-color: var(--nj-bg-light);
   }
 
+  /* Priceと揃えて1200pxに変更 */
   .nj-container {
-    max-width: 1000px;
+    max-width: 1200px; 
     margin: 0 auto;
+    width: 100%;
   }
 
-  .nj-center-title {
-    text-align: center;
-    margin-bottom: 80px;
-  }
+  .nj-center-title { text-align: center; margin-bottom: 80px; }
+  .nj-sub-title { color: var(--nj-orange); font-size: 0.9rem; font-weight: bold; letter-spacing: 0.2em; display: block; }
+  .nj-section-title { font-size: 2.5rem; color: var(--nj-navy); font-weight: 800; margin-top: 10px; }
 
-  .nj-sub-title {
-    color: var(--nj-orange);
-    font-size: 0.9rem;
-    font-weight: bold;
-    letter-spacing: 0.2em;
-    display: block;
-  }
-
-  .nj-section-title {
-    font-size: 2.2rem;
-    color: var(--nj-navy);
-    font-weight: 800;
-    margin-top: 10px;
-  }
-
-  /* グリッドレイアウト */
+  /* グリッドレイアウト：Gapを30pxに拡大 */
   .nj-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    gap: 30px; 
     align-items: stretch;
+    width: 100%;
   }
 
-  /* カラム共通設定 */
+  /* カラム設定：ここから背景色を削除しました */
   .nj-column {
-    padding: 50px 15px 35px;
-    border-radius: 24px;
+    /* background: #fff;  <--- これを削除 */
+    padding: 60px 25px 40px; 
+    border-radius: 20px;
     position: relative;
     border: 3px solid #eee;
     display: flex;
@@ -225,28 +177,32 @@
     transition: all 0.3s ease;
   }
 
-  /* 学年別の色と背景 */
-  .nj-is-elementary { border-color: var(--nj-orange); background-color: #fffbf8; }
-  .nj-is-junior { border-color: var(--nj-navy); background-color: #f4f7f9; }
-  .nj-is-high { border-color: #bdc3c7; background-color: #f9f9f9; }
+  /* --- ここで背景色を復活させました --- */
+  .nj-is-elementary {
+    border-color: var(--nj-orange);
+    background-color: #fffbf8; /* うっすらオレンジ */
+  }
+  .nj-is-junior {
+    border-color: var(--nj-navy);
+    background-color: #f4f7f9; /* うっすらネイビー */
+  }
+  .nj-is-high {
+    border-color: #bdc3c7;
+    background-color: #f9f9f9; /* うっすらグレー */
+  }
 
   .nj-featured {
     transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
   }
 
-  .nj-content-inner {
-    flex-grow: 1;
-  }
-
-  /* カラム上部のタグ */
   .nj-column-tag {
     position: absolute;
-    top: -14px;
-    left: 18px;
-    padding: 4px 10px;
+    top: -15px;
+    left: 20px;
+    padding: 6px 15px;
     border-radius: 4px;
-    font-size: 0.65rem;
+    font-size: 0.75rem;
     font-weight: 900;
     color: #fff;
   }
@@ -255,93 +211,29 @@
   .nj-is-high .nj-column-tag { background: var(--nj-gray); }
 
   .nj-category-title {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     font-weight: 800;
     color: var(--nj-navy);
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     text-align: center;
   }
-  .nj-category-title span { font-size: 0.85rem; font-weight: 500; opacity: 0.7; }
+  .nj-category-title span { font-size: 1rem; font-weight: 500; opacity: 0.7; }
 
-  .nj-course-header {
-    margin-bottom: 15px;
-  }
-  .nj-course-label { display: block; font-size: 0.8rem; color: #666; font-weight: bold; margin-bottom: 3px; }
-  .nj-course-name { display: block; font-size: 1.3rem; font-weight: 900; color: #1a365d; line-height: 1.2; }
+  .nj-course-name { font-size: 1.5rem; font-weight: 900; color: #1a365d; line-height: 1.2; display: block; margin-bottom: 10px; }
   .nj-mt-offset { margin-top: 35px; }
 
-  /* 内側のドット情報ブロック */
-  .nj-info-block {
-    padding: 20px 15px;
-    border-radius: 18px;
-    border: 3px dotted #eee;
-    background: #fff;
-  }
-  .nj-dot-blue { border-color: #a5c3f3; }
-  .nj-dot-red { border-color: #ffccb3; }
-  .nj-dot-dark { border-color: #ced4da; }
-  .nj-dot-gray { border-color: #e9ecef; }
-
-  .nj-time-text {
-    color: var(--nj-orange);
-    font-weight: 800;
-    font-size: 1.2rem;
-    letter-spacing: -0.02em;
-  }
-
-  .nj-time-row {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 10px;
-  }
+  .nj-info-block { padding: 20px 15px; border-radius: 18px; border: 3px dotted #eee; background: #fff; margin-bottom: 15px; }
+  .nj-time-text { color: var(--nj-orange); font-weight: 800; font-size: 1.2rem; }
+  .nj-time-row { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
   .nj-tag-icon { background: #1a365d; color: #fff; font-size: 0.65rem; padding: 2px 5px; border-radius: 4px; font-weight: 900; }
-  .nj-days { font-weight: 800; font-size: 0.95rem; color: #333; }
-  .nj-note { font-size: 0.8rem; color: #666; font-weight: bold; }
-
-  .nj-common-time-badge {
-    font-size: 0.85rem;
-    font-weight: 800;
-    color: #1a365d;
-    margin-bottom: 15px;
-    background: rgba(26, 54, 93, 0.05);
-    padding: 6px 8px;
-    border-radius: 6px;
-    text-align: center;
-  }
-
-  .nj-grade-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 8px;
-  }
-  .nj-grade-label { font-weight: 900; font-size: 1.1rem; color: var(--nj-navy); }
-  .nj-unit { font-size: 0.9rem; font-weight: 700; color: #666; }
-
-  .nj-rule-list {
-    margin: 15px 0 0 0;
-    padding: 12px 0 0 0;
-    list-style: none;
-    border-top: 1.2px solid rgba(0,0,0,0.06);
-  }
-  .nj-rule-list li {
-    font-size: 0.85rem;
-    color: #444;
-    font-weight: 700;
-    margin-bottom: 4px;
-    padding-left: 15px;
-    position: relative;
-  }
+  
+  .nj-rule-list { margin: 15px 0 0 0; padding: 12px 0 0 0; list-style: none; border-top: 1.2px solid rgba(0,0,0,0.06); }
+  .nj-rule-list li { font-size: 0.85rem; color: #444; font-weight: 700; margin-bottom: 4px; padding-left: 15px; position: relative; }
   .nj-rule-list li::before { content: "●"; position: absolute; left: 0; font-size: 0.5rem; top: 0.3rem; color: #ccc; }
   .nj-rule-list li.nj-alert { color: var(--nj-orange); }
-  .nj-rule-list li.nj-alert::before { color: var(--nj-orange); }
 
-  /* モバイル対応 */
   @media (max-width: 950px) {
     .nj-grid { grid-template-columns: 1fr; gap: 40px; }
     .nj-featured { transform: none; }
-    .nj-center-title { margin-bottom: 60px; }
-    .nj-section-title { font-size: 1.8rem; }
   }
 </style>

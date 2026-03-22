@@ -1,0 +1,161 @@
+---
+// 厳選した3つだけを表示
+const faqs = [
+  {
+    q: "「絵解き算数」は、計算が得意な子でも意味がありますか？",
+    a: "大いにあります。計算が速い子ほど「作業」になりがちですが、絵解きは「思考の深さ」を鍛えます。目に見えない論理を可視化する力は、中学受験の難問や、その先の数学で圧倒的な差になります。"
+  },
+  {
+    q: "小5・小6からの「中学受験」は遅くないでしょうか？",
+    a: "鳴滝塾は「詰め込み」の塾ではありません。思考の土台がある子なら、5年生からでも十分に伸びます。むしろ、早すぎる通塾で疲弊してしまう前に、本質的な考える力を育てる最適なタイミングです。"
+  },
+  {
+    q: "すでに定員に達しているコースはありますか？",
+    a: "鳴滝塾は一人ひとりを大切にする少人数制のため、各コースに定員を設けています。定員に達した場合は一度募集を停止しますが、ご希望の方には「空き待ち登録」をご案内しております。欠員が出次第、優先的にご連絡を差し上げますので、まずはお気軽にお問い合わせください。"
+  }
+];
+---
+
+<section class="faq-narutaki" id="faq">
+  <div class="container">
+    <h2 class="title">よくあるご質問</h2>
+    
+    <div class="faq-grid">
+      {faqs.map((faq) => (
+        <div class="faq-card">
+          <div class="q-row">
+            <span class="dot-icon"></span>
+            <h3>{faq.q}</h3>
+          </div>
+          <p class="answer">{faq.a}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="read-more-container">
+      <div class="gradient-overlay"></div>
+      <a href="/FAQ-all" class="btn-read-more">
+        <span>ほかにも疑問がありますか？（FAQ一覧へ）</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+.faq-narutaki {
+  padding: 80px 0;
+  background-color: #f4f7f9; // ページ全体の背景（カードを際立たせる）
+
+  .container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #333;
+    text-align: center;
+    margin-bottom: 50px;
+    letter-spacing: 0.1em;
+  }
+
+  .faq-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; // カード同士の間隔
+  }
+
+  .faq-card {
+    background: #fff;
+    // 上下左右のパディングを調整（下を少し詰めて間延びを防止）
+    padding: 25px 30px 15px; 
+    border: 3px dotted #d35400; // 鳴滝塾オレンジのドット枠
+    border-radius: 15px;
+    box-shadow: 3px 3px 0px rgba(0,0,0,0.05); // 軽い影で紙の重なりを表現
+    
+    h3 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #111;
+      line-height: 1.4;
+      margin-bottom: 5px;   // ★QとAの間の余白を極限までカット
+      padding-bottom: 5px;  // ★下線までの距離を調整
+      border-bottom: 1px solid #eee; // 質問と回答の間の薄い区切り線
+
+      &::before {
+        content: "Q.";
+        color: #d35400;
+        margin-right: 10px;
+        font-family: 'Arial Black', sans-serif;
+      }
+    }
+
+    .answer {
+      font-size: 1.05rem;
+      line-height: 2.0; // ノートらしいゆったりした行間
+      color: #444;
+      margin: 0;
+      padding-top: 0; // ★Qの直後から開始
+      font-weight: 500;
+      
+      // ★ノートの罫線（横線）を引く設定
+      background-image: linear-gradient(#eee 1px, transparent 1px);
+      background-size: 100% 2.0em; // line-heightの値（2.0）と合わせる
+      background-attachment: local;
+      background-position: 0 1.95em; // 最初の線が文字のベースラインに合うよう微調整
+
+      &::before {
+        content: "A.";
+        font-weight: 800;
+        color: #d35400;
+        margin-right: 10px;
+        font-family: 'Arial Black', sans-serif;
+      }
+    }
+  }
+
+  .read-more-container {
+    margin-top: 30px;
+    text-align: left;
+    
+    .btn-read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #0077b6;
+      text-decoration: underline;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #d35400;
+        text-decoration: none;
+      }
+    }
+  }
+
+  // スマホ表示の調整
+  @media (max-width: 700px) {
+    padding: 50px 0;
+    
+    .faq-card {
+      padding: 20px 20px 10px;
+      
+      h3 {
+        font-size: 1.1rem;
+      }
+      
+      .answer {
+        font-size: 1rem;
+        line-height: 1.8;
+        background-size: 100% 1.8em;
+        background-position: 0 1.75em;
+      }
+    }
+  }
+}
+</style>

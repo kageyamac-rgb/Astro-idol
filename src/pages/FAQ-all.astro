@@ -1,0 +1,181 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const allFaqs = [
+  {
+    q: "「絵解き算数」は、計算が得意な子でも意味がありますか？",
+    a: "大いにあります。計算が速い子ほど「作業」になりがちですが、絵解きは「思考の深さ」を鍛えます。目に見えない論理を可視化する力は、中学受験の難問や、その先の数学で圧倒的な差になります。"
+  },
+  {
+    q: "小5・小6からの「中学受験」は遅くないでしょうか？",
+    a: "鳴滝塾は「詰め込み」の塾ではありません。思考の土台がある子なら、5年生からでも十分に伸びます。むしろ、早すぎる通塾で疲弊してしまう前に、本質的な考える力を育てる最適なタイミングです。"
+  },
+  {
+    q: "すでに定員に達しているコースはありますか？",
+    a: "鳴滝塾は一人ひとりを大切にする少人数制のため、各コースに定員を設けています。定員に達した場合は一度募集を停止しますが、ご希望の方には「空き待ち登録」をご案内しております。欠員が出次第、優先的にご連絡を差し上げますので、まずはお気軽にお問い合わせください。"
+  },
+  {
+    q: "具体的に定員を教えてください。",
+    a: "学年ごとに最大で8人です。すべてのクラスを合わせてのご人数になります。"
+  },
+  {
+    q: "月謝の支払い方法は何がありますか？",
+    a: "銀行振込、または月謝袋による現金支払いです。"
+  },
+  {
+    q: "季節講習（夏期・冬期）だけの参加は可能ですか？",
+    a: "講習・補習は外部募集は行っていません。"
+  }
+];
+---
+
+<Layout title="よくあるご質問 | FAQ">
+  <Header />
+
+  <main class="faq-page-container">
+    <section class="faq-hero">
+      <div class="faq-hero-content">
+        <span class="faq-sub-title">FAQ</span>
+        <h2 class="faq-main-title">よくあるご質問</h2>
+        <p class="faq-hero-description">入塾に関するご質問や、学習内容の詳細についてお答えします。</p>
+      </div>
+    </section>
+
+    <section class="faq-content-section">
+      <div class="faq-grid">
+        {allFaqs.map((faq) => (
+          <div class="faq-card">
+            <h3 class="faq-question">{faq.q}</h3>
+            <p class="faq-answer">{faq.a}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="faq-footer-cta">
+        <div class="cta-inner">
+            <p>その他、気になることがあればお気軽にご相談ください。</p>
+            <a href="/#faq" class="yellow-back-btn">トップページに戻る</a>
+        </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  /* --- 構造設定 --- */
+  .faq-page-container {
+    width: 100%;
+    background-color: #f4f7f9;
+    padding-bottom: 100px;
+    font-family: sans-serif;
+  }
+
+  .faq-hero {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 100px 20px 40px;
+    text-align: center;
+  }
+
+  .faq-sub-title { color: #d35400; font-size: 0.9rem; font-weight: bold; display: block; }
+  .faq-main-title { font-size: 2.2rem; margin-top: 10px; font-weight: 700; color: #001530; }
+  .faq-hero-description { font-size: 1.2rem; color: #666; margin-top: 15px; }
+
+  .faq-content-section {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .faq-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  /* --- ノート風カードのデザイン --- */
+  .faq-card {
+    background: #fff;
+    padding: 25px 30px 15px; 
+    border: 3px dotted #d35400; /* ドット枠 */
+    border-radius: 15px;
+    box-shadow: 3px 3px 0px rgba(0,0,0,0.05);
+  }
+
+  .faq-question {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #111;
+    line-height: 1.4;
+    margin: 0 0 5px 0; /* 下の余白を極限までカット */
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .faq-question::before {
+    content: "Q.";
+    color: #d35400;
+    margin-right: 10px;
+  }
+
+  .faq-answer {
+    font-size: 1.05rem;
+    line-height: 2.0; /* 罫線の間隔 */
+    color: #444;
+    margin: 0;
+    padding: 0;
+    /* ノートの罫線 */
+    background-image: linear-gradient(#eee 1px, transparent 1px);
+    background-size: 100% 2.0em;
+    background-attachment: local;
+    background-position: 0 1.95em;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .faq-answer::before {
+    content: "A.";
+    font-weight: 800;
+    color: #d35400;
+    margin-right: 10px;
+  }
+
+  /* --- フッターCTA --- */
+  .faq-footer-cta {
+    text-align: center;
+    margin-top: 80px;
+  }
+  .faq-footer-cta p { font-size: 1.2rem; margin-bottom: 30px; font-weight: 600; }
+
+  .yellow-back-btn {
+    background: #ffd700;
+    padding: 15px 45px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    border-radius: 50px; 
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+
+  .yellow-back-btn:hover { background: #fcc200; transform: translateY(-2px); }
+
+  /* --- レスポンシブ --- */
+  @media (max-width: 768px) {
+    .faq-hero { padding: 60px 20px 30px; }
+    .faq-main-title { font-size: 1.8rem; }
+    .faq-card { padding: 20px 20px 10px; }
+    .faq-question { font-size: 1.1rem; }
+    .faq-answer { font-size: 1rem; }
+  }
+</style>
