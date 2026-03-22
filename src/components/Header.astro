@@ -1,20 +1,20 @@
 ---
 const link = `https://github.com/LaB-CH3/Astro-idol`
-
 ---
 
 <header class="nav">
     <div class="container row">
-     <div class="nav-logo one-third column">
-         <a href="#" class="logo-link">
+     <div class="nav-logo one-half column">
+         <a href="/" class="logo-link">
              <img src="/narutaki-logo.svg" alt="鳴滝塾">
          </a>
      </div>
-     <nav class="one-third column">
-         <ul class="center flex">
+     <nav class="one-half column">
+         <ul class="flex">
              <li><a href="#features">コース</a></li>
              <li><a href="#pricing">料金</a></li>
              <li><a href="#timetable">時間割</a></li>
+             <li><a href="#contact">お問い合わせ</a></li>
          </ul>
      </nav>
     </div>
@@ -22,8 +22,7 @@ const link = `https://github.com/LaB-CH3/Astro-idol`
 
 
  <style lang="scss">
-
-.nav{
+ .nav{
     padding: 15px 0;
     li{
       list-style: none;
@@ -34,13 +33,22 @@ const link = `https://github.com/LaB-CH3/Astro-idol`
     }
     a:not(.button):not(.logo-link){
       color: #111;
-      padding: 0 20px;
+      padding: 0 15px; // メニューが重ならないよう少しだけ調整
       text-decoration: none;
+      white-space: nowrap; // 文字が縦に割れないように保護
     }
     .logo-link img{
       width: 200px;
       margin-top: 0px;
     }
+    
+    // 横に並べるための設定
+    .flex {
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
     @media (max-width:700px) {
       nav{
         display: none;
