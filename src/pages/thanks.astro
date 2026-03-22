@@ -1,0 +1,135 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+// LINEのURL（Contactと同じもの）
+const lineUrl = "https://line.me/R/ti/p/@あなたのLINE_ID";
+---
+
+<Layout title="送信完了 | 鳴滝塾">
+  <Header />
+  
+  <main class="thanks-page">
+    <div class="thanks-container">
+      <div class="success-icon">✉️</div>
+      <h1>お問い合わせありがとうございます</h1>
+      
+      <div class="message-content">
+        <p>メッセージは無事に送信されました。</p>
+        <p>通常、<strong>2日以内</strong>に影山よりご返信を差し上げます。<br>
+        しばらくお待ちいただけますと幸いです。</p>
+      </div>
+
+      <div class="line-reminder">
+        <p>「返信を急いでいる」「もっと気軽に質問したい」という場合は、公式LINEからも受け付けております。</p>
+        <a href={lineUrl} class="line-btn" target="_blank" rel="noopener noreferrer">
+          鳴滝塾 公式LINEはこちら
+        </a>
+      </div>
+
+      <div class="navigation-area">
+        <a href="/" class="back-home-btn">トップページへ戻る</a>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .thanks-page {
+    padding: 120px 20px;
+    background-color: #f4f7f9;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .thanks-container {
+    max-width: 650px;
+    width: 100%;
+    background: #fff;
+    padding: 60px 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+    text-align: center;
+  }
+
+  .success-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    color: #001530;
+    font-weight: 800;
+    margin-bottom: 30px;
+  }
+
+  .message-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 40px;
+  }
+
+  .message-content strong {
+    color: #d35400;
+  }
+
+  /* LINEへの誘導（念押し） */
+  .line-reminder {
+    background-color: #f0fff0;
+    border: 1px solid #06c755;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+  }
+
+  .line-reminder p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  .line-btn {
+    display: inline-block;
+    background-color: #06c755;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 800;
+    transition: 0.3s;
+  }
+
+  .line-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(6, 199, 85, 0.3);
+  }
+
+  /* 戻るボタン */
+  .navigation-area {
+    border-top: 1px solid #eee;
+    padding-top: 30px;
+  }
+
+  .back-home-btn {
+    color: #001530;
+    text-decoration: underline;
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+
+  .back-home-btn:hover {
+    color: #d35400;
+  }
+
+  @media (max-width: 600px) {
+    .thanks-container { padding: 40px 20px; }
+    h1 { font-size: 1.6rem; }
+  }
+</style>
