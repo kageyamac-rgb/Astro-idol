@@ -1,0 +1,77 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const pageTitle = "プライバシーポリシー | 鳴滝塾";
+---
+
+<Layout title={pageTitle}>
+  <Header />
+
+  <main style="background-color: #ffffff; color: #333; padding: 40px 0; line-height: 1.7;">
+    <div style="max-width: 800px; margin: 0 auto; width: 90%;">
+      
+      <header style="text-align: center; margin-bottom: 30px;">
+        <h1 style="font-size: 2.2rem; font-weight: 900; color: #001530; margin: 0 !important; padding: 0 !important;">プライバシーポリシー</h1>
+        <p style="color: #666; font-size: 1rem; margin: 5px 0 0 0 !important;">個人情報の取り扱いについて</p>
+      </header>
+
+      <div class="p-content" style="display: flex; flex-direction: column; gap: 20px;">
+        
+        <p style="margin: 0 !important;">鳴滝塾（以下「当塾」）は、個人情報の重要性を認識し、個人情報保護に関する法令およびその他の規範を遵守し、以下の方針に基づき個人情報の保護に努めます。</p>
+
+        <section style="margin: 0 !important; padding: 0 !important;">
+          <h2 style="font-size: 1.4rem; color: #001530; border-left: 4px solid #001530; padding-left: 12px; margin: 0 0 10px 0 !important; line-height: 1.2;">1. 個人情報の収集</h2>
+          <p style="margin: 0 !important;">当塾は、お問い合わせや入塾申し込み等の際、氏名、住所、電話番号、メールアドレス等、特定の個人を識別できる情報を適正に収集いたします。</p>
+        </section>
+
+        <section style="margin: 0 !important; padding: 0 !important;">
+          <h2 style="font-size: 1.4rem; color: #001530; border-left: 4px solid #001530; padding-left: 12px; margin: 0 0 10px 0 !important; line-height: 1.2;">2. 利用目的</h2>
+          <p style="margin: 0 0 5px 0 !important;">お預かりした個人情報は、以下の目的で利用し、目的外の利用は行いません。</p>
+          <ul style="padding-left: 20px; margin: 0 !important; list-style-type: disc;">
+            <li style="margin-bottom: 5px !important;">お問い合わせに対する回答や資料送付のため</li>
+            <li style="margin-bottom: 5px !important;">学習指導、進路指導、および事務連絡のため</li>
+            <li style="margin-bottom: 0 !important;">緊急時のご連絡のため</li>
+          </ul>
+        </section>
+
+        <section style="margin: 0 !important; padding: 0 !important;">
+          <h2 style="font-size: 1.4rem; color: #001530; border-left: 4px solid #001530; padding-left: 12px; margin: 0 0 10px 0 !important; line-height: 1.2;">3. 第三者への開示・提供</h2>
+          <p style="margin: 0 0 5px 0 !important;">当塾は、次の場合を除き、個人情報を第三者に開示または提供いたしません。</p>
+          <ul style="padding-left: 20px; margin: 0 !important; list-style-type: disc;">
+            <li style="margin-bottom: 5px !important;">ご本人の同意がある場合</li>
+            <li style="margin-bottom: 5px !important;">法令に基づく場合</li>
+            <li style="margin-bottom: 0 !important;">人の生命、身体または財産の保護のために必要な場合</li>
+          </ul>
+        </section>
+
+        <section style="margin: 0 !important; padding: 0 !important;">
+          <h2 style="font-size: 1.4rem; color: #001530; border-left: 4px solid #001530; padding-left: 12px; margin: 0 0 10px 0 !important; line-height: 1.2;">4. 安全管理対策</h2>
+          <p style="margin: 0 !important;">当塾は、収集した個人情報の漏洩、滅失、毀損の防止、その他個人情報の安全管理のために必要かつ適切な措置を講じます。</p>
+        </section>
+
+        <section style="margin: 0 !important; padding: 0 !important;">
+          <h2 style="font-size: 1.4rem; color: #001530; border-left: 4px solid #001530; padding-left: 12px; margin: 0 0 10px 0 !important; line-height: 1.2;">5. お問い合わせ</h2>
+          <p style="margin: 0 !important;">個人情報の修正、削除、開示等に関するお問い合わせは、当塾までご連絡ください。</p>
+        </section>
+
+      </div>
+
+      <div style="text-align: center; border-top: 1px solid #eee; margin-top: 40px; padding-top: 40px;">
+        <a href="/" style="background: #001530; color: #fff; padding: 12px 50px; font-size: 1.3rem; border-radius: 50px; font-weight: 800; text-decoration: none; display: inline-block; transition: 0.3s;">ホームへ戻る</a>
+      </div>
+
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style is:global>
+  /* あらゆる余白の元凶を物理的に破壊 */
+  section, div, h1, h2, p, ul, li {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+</style>
