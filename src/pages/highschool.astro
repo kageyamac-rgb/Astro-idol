@@ -1,0 +1,145 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+import img1 from '../assets/anshin.svg';
+import img2 from '../assets/eiken.svg';
+import img3 from '../assets/shouron.svg';
+import img4 from '../assets/teikitest.svg';
+import img5 from '../assets/goukakuschool.png';
+
+const pageTitle = "高校部 学習サポート | 鳴滝塾";
+---
+
+<Layout title={pageTitle}>
+  <Header />
+
+  <main id="naru-root" style="background-color: #ffffff; color: #222; padding: 40px 0; overflow-x: hidden; width: 100%;">
+    
+    <header style="max-width: 900px; margin: 0 auto 50px; width: 95%; text-align: center;">
+      <span style="color: #001530; font-weight: 800; font-size: 1.1rem; letter-spacing: 0.1em;">HIGH SCHOOL SUPPORT</span>
+      <h1 style="font-size: 3.2rem; font-weight: 900; color: #001530; margin: 10px 0; line-height: 1.2;">高校部 学習サポートコース</h1>
+      <p style="font-size: 1.6rem; color: #666; line-height: 1.6;">大学入試までを「一貫指導」で。推薦・一般どちらの道も手厚く支えます。</p>
+    </header>
+
+    <div style="max-width: 900px; margin: 0 auto; width: 95%;">
+
+      <section class="n-block" style="display: flex; align-items: flex-start; justify-content: space-between; margin: 0 !important; padding: 10px 0 !important; width: 100%; border-bottom: 1px solid #f0f0f0;">
+        <div class="n-col-img" style="width: 44%; margin: 0 !important;">
+          <img src={img1.src} alt="一貫指導" style="width: 100%; height: auto; border-radius: 8px; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.05));" />
+        </div>
+        <div class="n-col-txt" style="width: 52%; margin: 0 !important;">
+          <h2 style="font-size: 2.0rem; font-weight: 900; color: #001530; line-height: 1.4; margin: 0 0 15px 0 !important;">中学から変わらない講師。余計な緊張はいりません。</h2>
+          <div class="n-notebook">
+            <p class="n-text" style="font-size: 1.8rem; font-weight: 600; line-height: 1.8; color: #333; margin: 0 !important; background-image: linear-gradient(transparent 95%, #eee 95%); background-size: 100% 3.24rem; background-position: 0 0.4rem;">
+              高校進学は環境が激変する時期です。鳴滝塾では、中学時代からお子様の性格や学習の癖を熟知している同じ講師が引き続き担当。新しい先生との相性に悩む必要もありません。一貫した信頼関係があるからこそ、スムーズに学習を継続できます。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="n-block n-rev" style="display: flex; flex-direction: row-reverse; align-items: flex-start; justify-content: space-between; margin: 0 !important; padding: 10px 0 !important; width: 100%; border-bottom: 1px solid #f0f0f0;">
+        <div class="n-col-img" style="width: 44%; margin: 0 !important;">
+          <img src={img2.src} alt="英検" style="width: 100%; height: auto; border-radius: 8px; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.05));" />
+        </div>
+        <div class="n-col-txt" style="width: 52%; margin: 0 !important;">
+          <h2 style="font-size: 2.0rem; font-weight: 900; color: #001530; line-height: 1.4; margin: 0 0 15px 0 !important;">大学入試を有利にする「英検」。授業外で無料サポート。</h2>
+          <div class="n-notebook">
+            <p class="n-text" style="font-size: 1.8rem; font-weight: 600; line-height: 1.8; color: #333; margin: 0 !important; background-image: linear-gradient(transparent 95%, #eee 95%); background-size: 100% 3.24rem; background-position: 0 0.4rem;">
+              英検のスコアは入試での加点や免除など大きな武器になります。当塾では通常の授業時間とは別に、英検対策の時間を<strong>無料</strong>で確保。準2級から準1級まで、志望校に合わせた個別対策を徹底的に応援します。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="n-block" style="display: flex; align-items: flex-start; justify-content: space-between; margin: 0 !important; padding: 10px 0 !important; width: 100%; border-bottom: 1px solid #f0f0f0;">
+        <div class="n-col-img" style="width: 44%; margin: 0 !important;">
+          <img src={img3.src} alt="推薦対策" style="width: 100%; height: auto; border-radius: 8px; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.05));" />
+        </div>
+        <div class="n-col-txt" style="width: 52%; margin: 0 !important;">
+          <h2 style="font-size: 2.0rem; font-weight: 900; color: #001530; line-height: 1.4; margin: 0 0 15px 0 !important;">提出書類から小論文まで。推薦入試を徹底個別指導。</h2>
+          <div class="n-notebook">
+            <p class="n-text" style="font-size: 1.8rem; font-weight: 600; line-height: 1.8; color: #333; margin: 0 !important; background-image: linear-gradient(transparent 95%, #eee 95%); background-size: 100% 3.24rem; background-position: 0 0.4rem;">
+              総合型選抜や推薦入試では、志望理由書の作成段階からバックアップ。入試3か月前から無料の個別指導を実施し、生徒の個性を引き出す説得力のある書類を共に作り上げ、合格の可能性を最大限に広げます。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="n-block n-rev" style="display: flex; flex-direction: row-reverse; align-items: flex-start; justify-content: space-between; margin: 0 !important; padding: 10px 0 !important; width: 100%; border-bottom: 1px solid #f0f0f0;">
+        <div class="n-col-img" style="width: 44%; margin: 0 !important;">
+          <img src={img4.src} alt="テスト対策" style="width: 100%; height: auto; border-radius: 8px; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.05));" />
+        </div>
+        <div class="n-col-txt" style="width: 52%; margin: 0 !important;">
+          <h2 style="font-size: 2.0rem; font-weight: 900; color: #001530; line-height: 1.4; margin: 0 0 15px 0 !important;">推薦は1年から。テスト補習は「最大5時間」対応。</h2>
+          <div class="n-notebook">
+            <p class="n-text" style="font-size: 1.8rem; font-weight: 600; line-height: 1.8; color: #333; margin: 0 !important; background-image: linear-gradient(transparent 95%, #eee 95%); background-size: 100% 3.24rem; background-position: 0 0.4rem;">
+              推薦入試の評価は高1の1学期から始まっています。当塾ではテスト前、本来の枠を超え、<strong>最大5時間まで</strong>塾で勉強可能。圧倒的な演習量を確保し、目標に向けた着実な結果へと繋げます。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="n-block" style="display: flex; align-items: flex-start; justify-content: space-between; margin: 0 !important; padding: 20px 0 !important; width: 100%;">
+        <div class="n-col-img" style="width: 44%; margin: 0 !important;">
+          <img src={img5.src} alt="実績" style="width: 100%; height: auto; border-radius: 8px; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.05));" />
+        </div>
+        <div class="n-col-txt" style="width: 52%; margin: 0 !important;">
+          <h2 style="font-size: 2.0rem; font-weight: 900; color: #001530; line-height: 1.4; margin: 0 0 15px 0 !important;">確かな進学実績</h2>
+          <div class="n-notebook">
+            <div class="n-text" style="font-size: 1.6rem; font-weight: 600; line-height: 1.7; color: #333; margin: 0 !important;">
+              <div style="border-left: 4px solid #001530; padding-left: 15px;">
+                <p style="font-size: 1.4rem; color: #555; margin: 0 0 5px 0 !important;"><strong>国公立大学:</strong></p>
+                <p style="font-size: 1.6rem; margin: 0 0 15px 0 !important;">京都大学、東京科学大学、名古屋大学、千葉大学、静岡大学、三重大学 など</p>
+                <p style="font-size: 1.4rem; color: #555; margin: 0 0 5px 0 !important;"><strong>私立大学:</strong></p>
+                <p style="font-size: 1.6rem; margin: 0 !important;">南山大学、青山学院大学、立命館大学、中京大学、名城大学、金城学院大学、淑徳大学 など</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div style="background-color: #f9f9f9; padding: 40px 0; margin-top: 20px;">
+      <div style="max-width: 800px; margin: 0 auto; width: 90%;">
+        <h2 style="text-align: center; margin-bottom: 30px; font-weight: 900; font-size: 2.2rem;">高校部についてよくある質問</h2>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          {[
+            {q: "小学生のころ通っていたのですが、高校からまた通えますか？", a: "はい、もちろんです。小学生の部から再び高校の部に入り、<strong>難関大学に進学</strong>しているお子様が多数いらっしゃいます。"},
+            {q: "高校からの入塾は可能ですか？", a: "可能です。ただし少人数制のため、空き状況によります。まずはご相談ください。"},
+            {q: "学区は関係ありますか？", a: "高校の部では学区は一切関係ありません。様々な高校の生徒が通っています。"}
+          ].map(faq => (
+            <div style="background: white; padding: 20px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05);">
+              <p style="font-size: 1.3rem; font-weight: 900; color: #001530; margin:0 !important;">Q. {faq.q}</p>
+              <p style="font-size: 1.1rem; color: #555; margin: 8px 0 0 0 !important; line-height: 1.6;" set:html={`A. ${faq.a}`}></p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center; padding: 80px 0;">
+       <a href="/" style="background: #001530; color: #fff; padding: 15px 50px; font-size: 1.6rem; border-radius: 50px; font-weight: 800; text-decoration: none; display: inline-block;">ホームへ戻る</a>
+       <p style="margin-top: 50px; font-size: 1.8rem; font-weight: 900; color: #001530; font-style: italic;">"Own your future, Step by step."</p>
+    </div>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style is:global>
+  /* Skeletonの強制マージンをリセット */
+  section, div, h2, p, ul, li { margin-top: 0 !important; }
+
+  @media (max-width: 999px) {
+    .n-block { flex-direction: column !important; margin-bottom: 40px !important; }
+    .n-rev { flex-direction: column !important; }
+    .n-col-img, .n-col-txt { width: 100% !important; }
+    .n-col-img { margin-bottom: 25px !important; }
+    h1 { font-size: 2.2rem !important; }
+    h2 { font-size: 1.8rem !important; }
+    .n-text { font-size: 1.6rem !important; background-size: 100% 2.88rem !important; }
+  }
+</style>

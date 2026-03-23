@@ -15,7 +15,7 @@ const pageTitle = "中学部 | 鳴滝塾";
 <Layout title={pageTitle}>
   <Header />
 
-  <main id="naru-root" style="background-color: #ffffff; color: #222; padding: 20px 0; overflow-x: hidden; width: 100%;">
+  <main id="naru-root" style="background-color: #ffffff; color: #222; padding: 40px 0; overflow-x: hidden; width: 100%;">
     
     <header style="max-width: 900px; margin: 0 auto 30px; width: 95%; text-align: center;">
       <span style="color: #001530; font-weight: 800; font-size: 1.1rem; letter-spacing: 0.1em;">ABOUT NARUTAKIJUKU</span>
@@ -25,7 +25,7 @@ const pageTitle = "中学部 | 鳴滝塾";
 
     <div style="max-width: 900px; margin: 0 auto; width: 95%;">
 
-      <section class="n-block" style="display: flex; align-items: flex-start; justify-content: space-between; margin: 0 0 10px 0 !important; padding: 10px 0 !important; width: 100%; border-bottom: 1px solid #f0f0f0;">
+      <section class="n-block" style="display: flex; align-items: flex-start; justify-content: space-between; margin: 0 !important; padding: 10px 0 !important; width: 100%; border-bottom: 1px solid #f0f0f0;">
         <div class="n-col-img" style="width: 44%; margin: 0 !important;">
           <img src={img1.src} alt="コの字型の座席" style="width: 100%; height: auto; border-radius: 8px; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.05));" />
         </div>
@@ -84,7 +84,7 @@ const pageTitle = "中学部 | 鳴滝塾";
       </section>
     </div>
 
-    <div style="background-color: #f9f9f9; padding: 20px 0; margin-top: 10px;">
+    <div style="background-color: #f9f9f9; padding: 40px 0; margin-top: 10px;">
       <div style="max-width: 800px; margin: 0 auto; width: 90%;">
         <h2 style="text-align: center; margin-bottom: 20px; font-weight: 900; font-size: 1.8rem;">中学部についてよくある質問</h2>
         <div style="display: flex; flex-direction: column; gap: 8px;">
@@ -97,19 +97,16 @@ const pageTitle = "中学部 | 鳴滝塾";
           ].map(faq => (
             <div style="background: white; padding: 15px 25px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.03);">
               <p style="font-size: 1.2rem; font-weight: 900; color: #001530; margin:0 !important;">Q. {faq.q}</p>
-              <p style="font-size: 1.1rem; color: #555; margin: 8px 0 0 0 !important; line-height: 1.4;">A. {faq.a}</p>
+              <p style="font-size: 1.1rem; color: #555; margin: 8px 0 0 0 !important; line-height: 1.4;" set:html={`A. ${faq.a}`}></p>
             </div>
           ))}
         </div>
       </div>
     </div>
 
-    <div style="text-align: center; padding: 40px 0;">
-       <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 20px;">
-         <a href="/juken" style="background: #fff; border: 1px solid #001530; color: #001530; padding: 8px 25px; font-size: 1.1rem; border-radius: 50px; font-weight: 800; text-decoration: none;">中学受験コース</a>
-         <a href="/service" style="background: #001530; color: #fff; padding: 8px 25px; font-size: 1.1rem; border-radius: 50px; font-weight: 800; text-decoration: none;">時間割・授業料</a>
-       </div>
-       <p style="font-size: 1.4rem; font-weight: 900; color: #001530; font-style: italic;">"Make it possible with us!"</p>
+    <div style="text-align: center; padding: 80px 0;">
+       <a href="/" style="background: #001530; color: #fff; padding: 15px 50px; font-size: 1.6rem; border-radius: 50px; font-weight: 800; text-decoration: none; display: inline-block;">ホームへ戻る</a>
+       <p style="margin-top: 50px; font-size: 1.8rem; font-weight: 900; color: #001530; font-style: italic;">"Make it possible with us!"</p>
     </div>
   </main>
 
@@ -117,18 +114,18 @@ const pageTitle = "中学部 | 鳴滝塾";
 </Layout>
 
 <style is:global>
-  /* 全タグのマージンをリセット */
+  /* 物理的に Skeleton のマージンをリセット */
   section, div, h2, p, ul, li {
     margin-top: 0 !important;
   }
 
   @media (max-width: 999px) {
-    .n-block { flex-direction: column !important; margin-bottom: 30px !important; }
+    .n-block { flex-direction: column !important; margin-bottom: 40px !important; }
     .n-rev { flex-direction: column !important; }
     .n-col-img, .n-col-txt { width: 100% !important; }
-    .n-col-img { margin-bottom: 15px !important; }
-    h1 { font-size: 1.8rem !important; }
-    h2 { font-size: 1.5rem !important; }
-    .n-text { font-size: 1.6rem !important; background-size: 100% 2.88rem !important; }
+    .n-col-img { margin-bottom: 20px !important; }
+    h1 { font-size: 2.2rem !important; }
+    h2 { font-size: 1.8rem !important; }
+    .n-text, .n-notebook p { font-size: 1.6rem !important; background-size: 100% 2.88rem !important; }
   }
 </style>

@@ -1,5 +1,5 @@
 ---
-// 1. 画像のインポート（パスがプロジェクトに合わせて正しいか確認してください）
+// 1. 画像のインポート
 import Bolt from '../assets/bolt.svg'
 import Money from '../assets/money.svg'
 import Wallet from '../assets/wallet.svg'
@@ -12,6 +12,8 @@ import Secure from '../assets/lock.svg'
     <div class="nj-center-title">
       <span class="nj-sub-title">SYSTEM & SCHEDULE</span>
       <h2 class="nj-section-title">コース別スケジュール・時間帯</h2>
+      
+      <a href="/Timetable-all" class="nj-timetable-btn">時間割の詳細はこちら →</a>
     </div>
 
     <div class="nj-grid">
@@ -24,7 +26,7 @@ import Secure from '../assets/lock.svg'
           <div class="nj-items-wrap">
             <div class="nj-course-header">
               <span class="nj-course-label">絵解き算数 (小1〜6)</span>
-              <span class="nj-course-name">どんぐり倶楽部(1コマ１時間)</span>
+              <span class="nj-course-name">どんぐり倶楽部(1h)</span>
             </div>
             
             <div class="nj-info-block nj-dot-blue">
@@ -32,36 +34,28 @@ import Secure from '../assets/lock.svg'
                 <span class="nj-tag-icon">フ</span>
                 <span class="nj-days">月火水金</span>
                 <span class="nj-time-text">17:00 - 19:00</span>
-                <span class="nj-note">(内1時間)</span>
               </div>
               <div class="nj-time-row">
                 <span class="nj-tag-icon">固</span>
                 <span class="nj-days">土曜日</span>
-                <span class="nj-time-text">10:00 - 11:00 / 11:00 - 12:00</span>
-                <span class="nj-note">(各1h)</span>
+                <span class="nj-time-text">10:00 / 11:00開始</span>
               </div>
               <ul class="nj-rule-list">
-                <li>平日はフレックス制。お子様の都合の良いタイミングでスタート。</li>
-                <li>土曜は時間固定制です。</li>
+                <li>平日はフレックス制。都合の良いタイミングで。</li>
                 <li class="nj-alert">18:00以降開始でも、19:00終了となります。</li>
               </ul>
             </div>
 
             <div class="nj-course-header nj-mt-offset">
               <span class="nj-course-label">小5,6</span>
-              <span class="nj-course-name">中学受験コース(1コマ2時間)</span>
+              <span class="nj-course-name">中学受験コース(2h)</span>
             </div>
             <div class="nj-info-block nj-dot-red">
               <div class="nj-common-time-badge">
                 月火水金 17:00-19:00 / 土 10:00-12:00
               </div>
-              <div class="nj-grade-row">
-                <span class="nj-grade-label">小6</span>
-                <span class="nj-time-text">週 3 〜 5 コマ</span>
-                <span class="nj-unit">(定額)</span>
-              </div>
               <ul class="nj-rule-list">
-                <li>追加料金なしで週3〜5回通塾可能。とことん学習時間を確保。</li>
+                <li>週3〜5回、定額でとことん学習時間を確保。</li>
               </ul>
             </div>
           </div>
@@ -78,9 +72,9 @@ import Secure from '../assets/lock.svg'
               <span class="nj-course-name">寺子屋式学習</span>
             </div>
             <div class="nj-info-block nj-dot-dark">
-              <div class="nj-time-row"><span class="nj-grade-label">新中1</span><span class="nj-days">水、土</span><span class="nj-time-text">19:30 - 21:30</span></div>
-              <div class="nj-time-row"><span class="nj-grade-label">新中2</span><span class="nj-days">月、金</span><span class="nj-time-text">19:30 - 21:30</span></div>
-              <div class="nj-time-row"><span class="nj-grade-label">新中3</span><span class="nj-days">火土</span><span class="nj-time-text">19:30 - 21:30</span></div>
+              <div class="nj-time-row"><span class="nj-grade-label">新中1</span><span class="nj-days">水、土</span><span class="nj-time-text">19:30-21:30</span></div>
+              <div class="nj-time-row"><span class="nj-grade-label">新中2</span><span class="nj-days">月、金</span><span class="nj-time-text">19:30-21:30</span></div>
+              <div class="nj-time-row"><span class="nj-grade-label">新中3</span><span class="nj-days">火、土</span><span class="nj-time-text">19:30-21:30</span></div>
             </div>
 
             <div class="nj-course-header nj-mt-offset">
@@ -88,10 +82,6 @@ import Secure from '../assets/lock.svg'
               <span class="nj-course-name">私立中学サポート</span>
             </div>
             <div class="nj-info-block nj-dot-dark">
-              <div class="nj-grade-row">
-                <span class="nj-grade-label">全学年</span>
-                <span class="nj-time-text">週 2 回 (1回2h)</span>
-              </div>
               <div class="nj-time-row">
                 <span class="nj-tag-icon">フ</span>
                 <span class="nj-days">月火水金土</span>
@@ -113,11 +103,6 @@ import Secure from '../assets/lock.svg'
             </div>
             <div class="nj-info-block nj-dot-gray">
               <div class="nj-time-row"><span class="nj-days">月 〜 金</span><span class="nj-time-text">19:15 - 21:15</span></div>
-              <div class="nj-grade-row">
-                <span class="nj-grade-label">高1〜3</span>
-                <span class="nj-time-text">週 2 回</span>
-                <span class="nj-unit">(1回2h)</span>
-              </div>
               <ul class="nj-rule-list">
                 <li>フレックス制。22:00まで対応。</li>
               </ul>
@@ -131,7 +116,6 @@ import Secure from '../assets/lock.svg'
 </section>
 
 <style>
-  /* 色の管理 */
   :root {
     --nj-orange: #d35400;
     --nj-navy: #001530;
@@ -144,7 +128,6 @@ import Secure from '../assets/lock.svg'
     background-color: var(--nj-bg-light);
   }
 
-  /* Priceと揃えて1200pxに変更 */
   .nj-container {
     max-width: 1200px; 
     margin: 0 auto;
@@ -153,9 +136,27 @@ import Secure from '../assets/lock.svg'
 
   .nj-center-title { text-align: center; margin-bottom: 80px; }
   .nj-sub-title { color: var(--nj-orange); font-size: 0.9rem; font-weight: bold; letter-spacing: 0.2em; display: block; }
-  .nj-section-title { font-size: 2.5rem; color: var(--nj-navy); font-weight: 800; margin-top: 10px; }
+  .nj-section-title { font-size: 2.5rem; color: var(--nj-navy); font-weight: 800; margin-top: 10px; margin-bottom: 20px; }
 
-  /* グリッドレイアウト：Gapを30pxに拡大 */
+  /* 詳細リンクボタンのデザイン（Pricingと統一） */
+  .nj-timetable-btn {
+    display: inline-block;
+    background: var(--nj-navy);
+    color: #fff !important;
+    padding: 12px 40px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+  .nj-timetable-btn:hover {
+    background-color: var(--nj-orange);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  }
+
   .nj-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -164,9 +165,7 @@ import Secure from '../assets/lock.svg'
     width: 100%;
   }
 
-  /* カラム設定：ここから背景色を削除しました */
   .nj-column {
-    /* background: #fff;  <--- これを削除 */
     padding: 60px 25px 40px; 
     border-radius: 20px;
     position: relative;
@@ -177,24 +176,11 @@ import Secure from '../assets/lock.svg'
     transition: all 0.3s ease;
   }
 
-  /* --- ここで背景色を復活させました --- */
-  .nj-is-elementary {
-    border-color: var(--nj-orange);
-    background-color: #fffbf8; /* うっすらオレンジ */
-  }
-  .nj-is-junior {
-    border-color: var(--nj-navy);
-    background-color: #f4f7f9; /* うっすらネイビー */
-  }
-  .nj-is-high {
-    border-color: #bdc3c7;
-    background-color: #f9f9f9; /* うっすらグレー */
-  }
+  .nj-is-elementary { border-color: var(--nj-orange); background-color: #fffbf8; }
+  .nj-is-junior { border-color: var(--nj-navy); background-color: #f4f7f9; }
+  .nj-is-high { border-color: #bdc3c7; background-color: #f9f9f9; }
 
-  .nj-featured {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-  }
+  .nj-featured { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,0,0,0.08); }
 
   .nj-column-tag {
     position: absolute;
