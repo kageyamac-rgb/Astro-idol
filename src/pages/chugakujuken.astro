@@ -1,0 +1,157 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+// 画像のインポート（元ソースのファイル名に基づいています）
+import img1 from '../assets/dochimo.png';
+import img2 from '../assets/jukengo.png';
+import img3 from '../assets/jukenmerit.png';
+import img4 from '../assets/hiketsu.png';
+import img5 from '../assets/goukakuschool.png';
+
+const pageTitle = "中学受験 | 鳴滝塾";
+---
+
+<Layout title={pageTitle}>
+  <Header />
+
+  <main id="naru-root" style="background-color: #ffffff; color: #222; padding: 40px 0; overflow-x: hidden; width: 100%;">
+    
+    <header style="max-width: 900px; margin: 0 auto 40px; width: 95%; text-align: center;">
+      <span style="color: #001530; font-weight: 800; font-size: 1.1rem; letter-spacing: 0.1em;">JUNIOR HIGH SCHOOL ENTRANCE EXAMS</span>
+      <h1 style="font-size: 2.8rem; font-weight: 900; color: #001530; margin: 5px 0; line-height: 1.1;">生活も充実させるため、短期で中学受験。</h1>
+      <p style="font-size: 1.4rem; color: #666; line-height: 1.4; margin: 0;">勉強と成長のバランスを大切にする、鳴滝塾独自の受験スタイル。</p>
+    </header>
+
+    <div style="max-width: 900px; margin: 0 auto; width: 95%;">
+
+      <section class="n-block" style="display: flex; align-items: flex-start; justify-content: space-between; margin: 0 !important; padding: 10px 0 !important; width: 100%; border-bottom: 1px solid #f0f0f0;">
+        <div class="n-col-img" style="width: 44%; margin: 0 !important;">
+          <img src={img1.src} alt="短期で中学受験" style="width: 100%; height: auto; border-radius: 8px; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.05));" />
+        </div>
+        <div class="n-col-txt" style="width: 53%; margin: 0 !important;">
+          <h2 style="font-size: 2.0rem; font-weight: 900; color: #001530; line-height: 1.3; margin: 0 0 10px 0 !important;">生活も充実させるため、短期で中学受験。</h2>
+          <div class="n-notebook">
+            <p style="font-size: 1.8rem; font-weight: 600; line-height: 1.8; color: #333; margin: 0 !important; background-image: linear-gradient(transparent 95%, #eee 95%); background-size: 100% 3.24rem; background-position: 0 0.4rem;">
+              小学生の低学年から、毎日塾に通い、一生懸命に合格を目指す姿勢は素晴らしいと思います。しかし、家族との時間や友達との交流、そして遊びなど、成長に必要な別の経験も重要だと考えます。<br><br>
+              当塾では、短期集中をモットーにしています。このアプローチは、低学年から地道に努力している子どもたちと比べると、差が生じるかもしれません。早くから始めれば、もっと良い学校に入れたかもしれませんが、私たちは勉強以外の時間を大切にし、バランスを取ることを推奨しています。そのため、現在の実力よりも少し背伸びした受験を行っています。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="n-block n-rev" style="display: flex; flex-direction: row-reverse; align-items: flex-start; justify-content: space-between; margin: 0 !important; padding: 10px 0 !important; width: 100%; border-bottom: 1px solid #f0f0f0;">
+        <div class="n-col-img" style="width: 44%; margin: 0 !important;">
+          <img src={img2.src} alt="燃え尽き症候群対策" style="width: 100%; height: auto; border-radius: 8px; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.05));" />
+        </div>
+        <div class="n-col-txt" style="width: 53%; margin: 0 !important;">
+          <h2 style="font-size: 2.0rem; font-weight: 900; color: #001530; line-height: 1.3; margin: 0 0 10px 0 !important;">燃え尽き症候群をぶっ飛ばせ。</h2>
+          <div class="n-notebook">
+            <p style="font-size: 1.8rem; font-weight: 600; line-height: 1.8; color: #333; margin: 0 !important; background-image: linear-gradient(transparent 95%, #eee 95%); background-size: 100% 3.24rem; background-position: 0 0.4rem;">
+              多くの受験をする小学生が燃え尽き症候群に陥ることがあります。彼らは、良い中学に合格することで全てが終わり、解放されると考えているかもしれませんが、実際には中学受験が始まりに過ぎません。<br><br>
+              私たちの塾では、短期集中勉強をモットーにしており、合格した後もまだまだ頑張りたいという生徒が多いです。彼らは、合格後もさらなる成長を目指し、自分の可能性を追求したいと願っています。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="n-block" style="display: flex; align-items: flex-start; justify-content: space-between; margin: 0 !important; padding: 10px 0 !important; width: 100%; border-bottom: 1px solid #f0f0f0;">
+        <div class="n-col-img" style="width: 44%; margin: 0 !important;">
+          <img src={img3.src} alt="中学受験のメリット" style="width: 100%; height: auto; border-radius: 8px; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.05));" />
+        </div>
+        <div class="n-col-txt" style="width: 53%; margin: 0 !important;">
+          <h2 style="font-size: 2.0rem; font-weight: 900; color: #001530; line-height: 1.3; margin: 0 0 10px 0 !important;">私立中学受験のメリット</h2>
+          <div class="n-notebook">
+            <div style="font-size: 1.6rem; font-weight: 600; line-height: 1.7; color: #333;">
+              <ol style="list-style: none; padding: 0; margin: 0;">
+                <li style="margin-bottom: 10px; border-bottom: 1px solid #eee;"><strong>1. 私立には推薦や総合選抜入試に理解がある</strong>: 生徒の個性や能力を重視する教育方針があり、公立高校が嫌う傾向にある推薦型入試にも柔軟に対応しています。</li>
+                <li style="margin-bottom: 10px; border-bottom: 1px solid #eee;"><strong>2. 教育の質と多様性</strong>: 特色あるプログラムが多く、学習進度も公立より1年以上早いため、大学受験に向けた最終的な余裕が生まれます。</li>
+                <li><strong>3. 生徒指導と教育環境</strong>: 少人数編成やカウンセラー配置など個別指導に力が入っており、良好な友人関係が築きやすい環境です。</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="n-row n-rev" style="display: flex; flex-direction: row-reverse; align-items: flex-start; justify-content: space-between; margin: 0 !important; padding: 10px 0 !important; width: 100%; border-bottom: 1px solid #f0f0f0;">
+        <div class="n-col-img" style="width: 44%; margin: 0 !important;">
+          <img src={img4.src} alt="塾の特徴" style="width: 100%; height: auto; border-radius: 12px; filter: drop-shadow(0 10px 30px rgba(0,0,0,0.06));" />
+        </div>
+        <div class="n-col-txt" style="width: 53%; margin: 0 !important;">
+          <h2 style="font-size: 2.0rem; font-weight: 900; color: #001530; line-height: 1.4; margin: 0 0 15px 0 !important;">鳴滝塾の中学受験の特徴</h2>
+          <div class="n-notebook">
+            <div style="font-size: 1.6rem; font-weight: 600; line-height: 1.7; color: #333;">
+              <ol style="list-style: none; padding: 0; margin: 0;">
+                <li style="margin-bottom: 10px; border-bottom: 1px solid #eee;"><strong>1. 明朗会計の定額制</strong>: 週3日以上通え、受験シーズンの毎日通塾や補習にも追加料金は一切ありません。</li>
+                <li style="margin-bottom: 10px; border-bottom: 1px solid #eee;"><strong>2. 個人に合わせたプログラム</strong>: 苦手克服をテーマにしたオーダーメイド指導。理社も暗記ではなく「根本理解」を促します。</li>
+                <li><strong>3. 少し背伸びした受験校選び</strong>: 勉強に嫌なイメージを残さず、誇りを持てる合格を目指して自信を育てます。</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="n-row" style="display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 40px; width: 100%;">
+        <div class="n-col-img" style="width: 44%; margin: 0 !important;">
+          <img src={img5.src} alt="主な進学先" style="width: 100%; height: auto; border-radius: 12px; filter: drop-shadow(0 10px 30px rgba(0,0,0,0.06));" />
+        </div>
+        <div class="n-col-txt" style="width: 53%; margin: 0 !important;">
+          <h2 style="font-size: 2.0rem; font-weight: 900; color: #001530; line-height: 1.4; margin: 0 0 15px 0 !important;">主な合格先</h2>
+          <div class="n-notebook">
+            <p style="font-size: 1.8rem; font-weight: 600; line-height: 1.8; color: #333; margin: 0 !important; background-image: linear-gradient(transparent 95%, #eee 95%); background-size: 100% 3.24rem; background-position: 0 0.4rem;">
+              滝中学、南山中学、名古屋中学、愛知中学、愛知工業大学名電中学校、中部大学春日丘中学、金城学院中学、聖霊中学、椙山女学園中学校など。
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div style="background-color: #f9f9f9; padding: 40px 0; margin-top: 10px;">
+      <div style="max-width: 800px; margin: 0 auto; width: 90%;">
+        <h2 style="text-align: center; margin-bottom: 30px; font-weight: 900; font-size: 2.2rem;">中学入試のよくある質問</h2>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          {[
+            {q: "クラスはどうなっていますか？", a: "どんぐりクラブで問題を解いている子と一緒に受験勉強をしています。特別に進学教室が用意されているわけではありません。"},
+            {q: "いつ頃まで受け付けていますか？", a: "すごく力のある子で夏休みまでです。あとは志望校によりますのでご相談ください。"},
+            {q: "他の塾からでも大丈夫ですか？", a: "大丈夫です。当塾に転塾をして合格した生徒も多数います。逆に言えば大手の塾に合っていない場合も多いです。"},
+            {q: "宿題は出ますか？", a: "漢字の宿題は毎日出ます。また、社会や理科の暗記は宿題となることが多いです。"},
+            {q: "教材費はありますか？", a: "年間定額で15,000円でいただいております。"}
+          ].map(faq => (
+            <div style="background: white; padding: 20px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05);">
+              <p style="font-size: 1.3rem; font-weight: 900; color: #001530; margin:0 !important;">Q. {faq.q}</p>
+              <p style="font-size: 1.1rem; color: #555; margin: 8px 0 0 0 !important; line-height: 1.6;">A. {faq.a}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center; padding: 60px 0;">
+       <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 30px;">
+         <a href="/donguri" style="background: #fff; border: 2px solid #001530; color: #001530; padding: 10px 25px; font-size: 1.2rem; border-radius: 50px; font-weight: 800; text-decoration: none;">どんぐりクラブ</a>
+         <a href="/highschool" style="background: #001530; color: #fff; padding: 10px 25px; font-size: 1.2rem; border-radius: 50px; font-weight: 800; text-decoration: none;">中・高等部</a>
+       </div>
+       <p style="font-size: 1.8rem; font-weight: 900; color: #001530; font-style: italic;">"This is where success is."</p>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style is:global>
+  /* 物理的に Skeleton のマージンをリセット */
+  section, div, h2, p, ul, li {
+    margin-top: 0 !important;
+  }
+
+  @media (max-width: 999px) {
+    .n-block, .n-row { flex-direction: column !important; margin-bottom: 40px !important; }
+    .n-rev { flex-direction: column !important; }
+    .n-col-img, .n-col-txt { width: 100% !important; }
+    .n-col-img { margin-bottom: 20px !important; }
+    h1 { font-size: 2.2rem !important; }
+    h2 { font-size: 1.8rem !important; }
+    .n-text, .n-notebook p { font-size: 1.6rem !important; background-size: 100% 2.88rem !important; }
+  }
+</style>

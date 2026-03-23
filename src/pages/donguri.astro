@@ -1,0 +1,150 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+import img1 from '../assets/whataboutdonguri.png';
+import img2 from '../assets/9sainokabe.png';
+import img3 from '../assets/brainkairo.png';
+import img4 from '../assets/seichou.png';
+
+const pageTitle = "どんぐりクラブ(小学生) | 鳴滝塾";
+---
+
+<Layout title={pageTitle}>
+  <Header />
+
+  <main id="naru-root" style="background-color: #ffffff; color: #222; padding: 20px 0; overflow-x: hidden; width: 100%;">
+    
+    <header style="max-width: 900px; margin: 0 auto 30px; width: 95%; text-align: center;">
+      <span style="color: #001530; font-weight: 800; font-size: 1.1rem; letter-spacing: 0.1em;">About Donguri Club</span>
+      <h1 style="font-size: 2.8rem; font-weight: 900; color: #001530; margin: 5px 0; line-height: 1.1;">絵解き算数「どんぐりクラブ」って何？</h1>
+      <p style="font-size: 1.4rem; color: #666; line-height: 1.4; margin: 0;">一生モノの思考力「絶対学力」を育てる独自のメソッド。</p>
+    </header>
+
+    <div style="max-width: 900px; margin: 0 auto; width: 95%;">
+
+      <section class="n-block" style="display: flex; align-items: flex-start; justify-content: space-between; margin: 0 0 10px 0 !important; padding: 10px 0 !important; width: 100%; border-bottom: 1px solid #f0f0f0;">
+        <div class="n-col-img" style="width: 44%; margin: 0 !important;">
+          <img src={img1.src} alt="どんぐりクラブとは" style="width: 100%; height: auto; border-radius: 8px; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.05));" />
+        </div>
+        <div class="n-col-txt" style="width: 53%; margin: 0 !important;">
+          <h2 style="font-size: 2.0rem; font-weight: 900; color: #001530; line-height: 1.3; margin: 0 0 10px 0 !important;">考える力を、「絵を操作する」ことで育てる。</h2>
+          <div class="n-notebook">
+            <p class="n-text" style="font-size: 1.8rem; font-weight: 600; line-height: 1.8; color: #333; margin: 0 !important; background-image: linear-gradient(transparent 95%, #eee 95%); background-size: 100% 3.24rem; background-position: 0 0.4rem;">
+              どんぐり倶楽部とは、すべての教科に役立つ思考力<strong>「絶対学力」</strong>を提唱している糸山泰造氏によって主催されています。<br><br>
+              当鳴滝塾では、公式準拠教室として、学習アドバイザー糸山先生のやり方公式で、良質問題をゆっくり解いていきます。そのさい、必ず絵図で算数をとくことで、確実に考える力を育てていきます。<br><br>
+              考えるというのは、「絵を操作する」ことです。絵図を通して、いろいろな分野に応用の利く、「視考力」を育てます。先取り学習、高速学習とは反対の<strong>「じっくり、ゆっくり、ていねい」</strong>な学習です。
+            </p>
+          </div>
+          <div style="margin-top: 15px;">
+            <a href="https://reonreon.com/" target="_blank" rel="noopener" style="font-size: 1.6rem; color: #d35400; font-weight: 800; text-decoration: underline;">→ 糸山先生のホームページへ!</a>
+            <div style="margin-top: 10px;">
+              <p style="font-size: 1.3rem; font-weight: 800; color: #777; margin: 0 !important;">糸山先生の著作（Amazon）:</p>
+              <ul style="list-style: none; padding: 0; margin: 5px 0 0 0; display: flex; flex-wrap: wrap; gap: 15px;">
+                <li><a href="https://www.amazon.co.jp/s?k=12歳までに「絶対学力」を育てる学習法+糸山泰造" target="_blank" style="font-size: 1.4rem; color: #d35400; text-decoration: underline;">1.学習法</a></li>
+                <li><a href="https://www.amazon.co.jp/s?k=絶対学力+糸山泰造" target="_blank" style="font-size: 1.4rem; color: #d35400; text-decoration: underline;">2.絶対学力</a></li>
+                <li><a href="https://www.amazon.co.jp/s?k=新・絶対学力+糸山泰造" target="_blank" style="font-size: 1.4rem; color: #d35400; text-decoration: underline;">3.新・絶対学力</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="n-block n-rev" style="display: flex; flex-direction: row-reverse; align-items: flex-start; justify-content: space-between; margin: 0 !important; padding: 10px 0 !important; width: 100%; border-bottom: 1px solid #f0f0f0;">
+        <div class="n-col-img" style="width: 44%; margin: 0 !important;">
+          <img src={img2.src} alt="9歳の壁" style="width: 100%; height: auto; border-radius: 8px; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.05));" />
+        </div>
+        <div class="n-col-txt" style="width: 53%; margin: 0 !important;">
+          <h2 style="font-size: 2.0rem; font-weight: 900; color: #001530; line-height: 1.3; margin: 0 0 10px 0 !important;">９歳までに身につけなければならない本当の学力</h2>
+          <div class="n-notebook">
+            <p class="n-text" style="font-size: 1.8rem; font-weight: 600; line-height: 1.8; color: #333; margin: 0 !important; background-image: linear-gradient(transparent 95%, #eee 95%); background-size: 100% 3.24rem; background-position: 0 0.4rem;">
+              人間の基本的な考え方のうち、ほとんどの思考力が９歳までに決まってしまいます。数多くの考え方を自分自身で試行錯誤を続けながら身につけると、多くの思考回路が９歳までに身につきます。<br><br>
+              逆に、そうした九歳までの時期を、ただ計算ばかり漢字を写すことばかりに費やすと、どうしてもその思考回路を増やすことができません。だから、「将来のための一生モノの財産」＝「絶対学力」をこの時期に身につける必要があるのです。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="n-block" style="display: flex; align-items: flex-start; justify-content: space-between; margin: 0 !important; padding: 10px 0 !important; width: 100%; border-bottom: 1px solid #f0f0f0;">
+        <div class="n-col-img" style="width: 44%; margin: 0 !important;">
+          <img src={img3.src} alt="絵を描くメリット" style="width: 100%; height: auto; border-radius: 8px; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.05));" />
+        </div>
+        <div class="n-col-txt" style="width: 53%; margin: 0 !important;">
+          <h2 style="font-size: 2.0rem; font-weight: 900; color: #001530; line-height: 1.3; margin: 0 0 10px 0 !important;">幼少期に、絵や図を描いて問題を解くことのメリット</h2>
+          <div class="n-notebook">
+            <div style="font-size: 1.6rem; font-weight: 600; line-height: 1.7; color: #333;">
+              <ol style="list-style: none; padding: 0; margin: 0;">
+                <li style="margin-bottom: 10px; border-bottom: 1px solid #eee;"><strong>1. 視覚的な理解</strong>: 幼少期の子供は、言葉よりも視覚的な情報をより理解しやすいです。絵や図を描くことで、問題や概念が視覚的に表現され、子供がより深く理解しやすくなります。</li>
+                <li style="margin-bottom: 10px; border-bottom: 1px solid #eee;"><strong>2. 創造性の発揮</strong>: 子供は自由な発想力を持っており、絵や図を描くことでその創造性を発揮することができます。新しいアイデアや解決策が生まれやすくなります。</li>
+                <li style="margin-bottom: 10px; border-bottom: 1px solid #eee;"><strong>3. 自己表現とコミュニケーション</strong>: 絵や図を描くことは、子供が自己表現する手段となります。描いた絵や図を使って自分の考えを表現し、共有することができます。</li>
+                <li style="margin-bottom: 10px; border-bottom: 1px solid #eee;"><strong>4. 問題解決能力の発展</strong>: 問題の本質をより明確に把握しやすくなり、解決策を見つけやすくなります。</li>
+                <li><strong>5. 記憶の補強</strong>: 視覚的な情報は記憶に残りやすく、描いた絵や図を見ることで、学んだ内容をより長期的に記憶することができます。</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="n-block n-rev" style="display: flex; flex-direction: row-reverse; align-items: flex-start; justify-content: space-between; margin: 0 !important; padding: 10px 0 !important; width: 100%;">
+        <div class="n-col-img" style="width: 44%; margin: 0 !important;">
+          <img src={img4.src} alt="学習法" style="width: 100%; height: auto; border-radius: 8px; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.05));" />
+        </div>
+        <div class="n-col-txt" style="width: 53%; margin: 0 !important;">
+          <h2 style="font-size: 2.0rem; font-weight: 900; color: #001530; line-height: 1.3; margin: 0 0 10px 0 !important;">どんぐりクラブの学習法</h2>
+          <div class="n-notebook">
+            <p class="n-text" style="font-size: 1.8rem; font-weight: 600; line-height: 1.8; color: #333; margin: 0 !important; background-image: linear-gradient(transparent 95%, #eee 95%); background-size: 100% 3.24rem; background-position: 0 0.4rem;">
+              学年は関係なく、お子様に必要だと思われる文章問題をやっていただきます。必ず絵を描いてもらって解いてもらうよう指導いたします。すぐに絵を描けるようになるお子様もいれば、３ヶ月でやっとわかってもらえるお子様もいます。
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div style="background-color: #f9f9f9; padding: 20px 0; margin-top: 10px;">
+      <div style="max-width: 800px; margin: 0 auto; width: 90%;">
+        <h2 style="text-align: center; margin-bottom: 20px; font-weight: 900; font-size: 1.8rem;">よくある質問</h2>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          {[
+            {q: "クラスはどうなっていますか？", a: "1クラスに1年から6年まですべての学年がいます。それぞれが、レベルに応じた問題に取り組んでいます。"},
+            {q: "授業の振替はできますか？", a: "はい、都合の良い別の曜日に振り替えることができます。"},
+            {q: "字があまり読めませんが大丈夫？", a: "一緒に問題を読みます。段階的に取り組んで、はっきりと理解できるようになります。"},
+            {q: "子供に落ち着きがありません。", a: "周りが静かに集中しているので、ほとんどのお子様が自然に静かに取り組めます。"}
+          ].map(faq => (
+            <div style="background: white; padding: 15px 25px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.03);">
+              <p style="font-size: 1.4rem; font-weight: 900; color: #001530; margin:0 !important;">Q. {faq.q}</p>
+              <p style="font-size: 1.3rem; color: #555; margin: 8px 0 0 0 !important; line-height: 1.4;">A. {faq.a}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center; padding: 40px 0;">
+       <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 20px;">
+         <a href="/" style="background: #fff; border: 1px solid #001530; color: #001530; padding: 8px 25px; font-size: 1.1rem; border-radius: 50px; font-weight: 800; text-decoration: none;">ホームへ戻る</a>
+         <a href="/juken" style="background: #001530; color: #fff; padding: 8px 25px; font-size: 1.1rem; border-radius: 50px; font-weight: 800; text-decoration: none;">中学受験コースへ</a>
+       </div>
+       <p style="font-size: 1.4rem; font-weight: 900; color: #001530; font-style: italic;">"Don't feel, think it deeply!"</p>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style is:global>
+  /* 全てのタグのデフォルトマージンを殺して、インライン指定を絶対にする */
+  section, div, h2, p, ul, li {
+    margin-top: 0 !important;
+  }
+
+  @media (max-width: 999px) {
+    .n-block { flex-direction: column !important; margin-bottom: 40px !important; }
+    .n-rev { flex-direction: column !important; }
+    .n-col-img, .n-col-txt { width: 100% !important; }
+    .n-col-img { margin-bottom: 15px !important; }
+    h1 { font-size: 2.2rem !important; }
+    h2 { font-size: 1.8rem !important; }
+    .n-text { font-size: 1.6rem !important; background-size: 100% 2.88rem !important; }
+  }
+</style>

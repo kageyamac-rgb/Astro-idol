@@ -1,0 +1,134 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+// 画像のインポート
+import img1 from '../assets/konoji.png';
+import img2 from '../assets/doryoku.png';
+import img3 from '../assets/kosei.png';
+import img4 from '../assets/shingakusaki.png';
+
+const pageTitle = "中学部 | 鳴滝塾";
+---
+
+<Layout title={pageTitle}>
+  <Header />
+
+  <main id="naru-root" style="background-color: #ffffff; color: #222; padding: 20px 0; overflow-x: hidden; width: 100%;">
+    
+    <header style="max-width: 900px; margin: 0 auto 30px; width: 95%; text-align: center;">
+      <span style="color: #001530; font-weight: 800; font-size: 1.1rem; letter-spacing: 0.1em;">ABOUT NARUTAKIJUKU</span>
+      <h1 style="font-size: 2.8rem; font-weight: 900; color: #001530; margin: 5px 0; line-height: 1.1;">寺子屋式、先生が目の前にいるコの字の机配置。</h1>
+      <p style="font-size: 1.4rem; color: #666; line-height: 1.4; margin: 0;">一人ひとりの目線に合わせ、主要5教科すべてを徹底サポート。</p>
+    </header>
+
+    <div style="max-width: 900px; margin: 0 auto; width: 95%;">
+
+      <section class="n-block" style="display: flex; align-items: flex-start; justify-content: space-between; margin: 0 0 10px 0 !important; padding: 10px 0 !important; width: 100%; border-bottom: 1px solid #f0f0f0;">
+        <div class="n-col-img" style="width: 44%; margin: 0 !important;">
+          <img src={img1.src} alt="コの字型の座席" style="width: 100%; height: auto; border-radius: 8px; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.05));" />
+        </div>
+        <div class="n-col-txt" style="width: 53%; margin: 0 !important;">
+          <h2 style="font-size: 2.0rem; font-weight: 900; color: #001530; line-height: 1.3; margin: 0 0 10px 0 !important;">十人十色の理解に寄り添う、コの字型の座席。</h2>
+          <div class="n-notebook">
+            <p class="n-text" style="font-size: 1.8rem; font-weight: 600; line-height: 1.8; color: #333; margin: 0 !important; background-image: linear-gradient(transparent 95%, #eee 95%); background-size: 100% 3.24rem; background-position: 0 0.4rem;">
+              子供は一人ひとり理解するペースも違えば、わからない場所も違います。そのため、当鳴滝塾では講師が黒板に向く時間をできるだけ短縮。子供が理解できない部分を子供の目線で向かい合う「講師中心のコの字型」座席で、しっかりと学習をサポートしていきます。生徒一人ひとりに合った指導が鳴滝塾の目標です。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="n-block n-rev" style="display: flex; flex-direction: row-reverse; align-items: flex-start; justify-content: space-between; margin: 0 !important; padding: 10px 0 !important; width: 100%; border-bottom: 1px solid #f0f0f0;">
+        <div class="n-col-img" style="width: 44%; margin: 0 !important;">
+          <img src={img2.src} alt="演習重視" style="width: 100%; height: auto; border-radius: 8px; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.05));" />
+        </div>
+        <div class="n-col-txt" style="width: 53%; margin: 0 !important;">
+          <h2 style="font-size: 2.0rem; font-weight: 900; color: #001530; line-height: 1.3; margin: 0 0 10px 0 !important;">演習多め！脳に汗をかく。5教科全科目対応。</h2>
+          <div class="n-notebook">
+            <p class="n-text" style="font-size: 1.8rem; font-weight: 600; line-height: 1.8; color: #333; margin: 0 !important; background-image: linear-gradient(transparent 95%, #eee 95%); background-size: 100% 3.24rem; background-position: 0 0.4rem;">
+              板書スタイルで解くプロセスを教え、すぐさま実践。「わかったつもり」を「わかった」にするまで徹底的に演習します。<strong>テスト前の無料補習</strong>で定期テストを徹底サポート。「急がば回れ」の精神で、ある程度の非効率さが結局は成功につながると信じています。主要五教科すべてに対応いたします。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="n-block" style="display: flex; align-items: flex-start; justify-content: space-between; margin: 0 !important; padding: 10px 0 !important; width: 100%; border-bottom: 1px solid #f0f0f0;">
+        <div class="n-col-img" style="width: 44%; margin: 0 !important;">
+          <img src={img3.src} alt="小人数制" style="width: 100%; height: auto; border-radius: 8px; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.05));" />
+        </div>
+        <div class="n-col-txt" style="width: 53%; margin: 0 !important;">
+          <h2 style="font-size: 2.0rem; font-weight: 900; color: #001530; line-height: 1.3; margin: 0 0 10px 0 !important;">大手とも個別とも違う。仲間と切磋琢磨する環境。</h2>
+          <div class="n-notebook">
+            <p class="n-text" style="font-size: 1.8rem; font-weight: 600; line-height: 1.8; color: #333; margin: 0 !important; background-image: linear-gradient(transparent 95%, #eee 95%); background-size: 100% 3.24rem; background-position: 0 0.4rem;">
+              同じ学年の仲間と一緒に学ぶ環境は、健全な競争や刺激となり、モチベーションを高めます。これが個別指導にはない、少人数制の利点です。大手塾のように人数が多すぎてサポートが行き届かず、生徒がサボってしまうようなこともありません。一人ひとりの努力がしっかり目に見える環境で、自己成長を促します。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="n-block n-rev" style="display: flex; flex-direction: row-reverse; align-items: flex-start; justify-content: space-between; margin: 0 !important; padding: 10px 0 !important; width: 100%;">
+        <div class="n-col-img" style="width: 44%; margin: 0 !important;">
+          <img src={img4.src} alt="進学実績" style="width: 100%; height: auto; border-radius: 8px; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.05));" />
+        </div>
+        <div class="n-col-txt" style="width: 53%; margin: 0 !important;">
+          <h2 style="font-size: 2.0rem; font-weight: 900; color: #001530; line-height: 1.3; margin: 0 0 10px 0 !important;">しっかりとした高校入試の進学実績。</h2>
+          <div class="n-notebook">
+            <p class="n-text" style="font-size: 1.8rem; font-weight: 600; line-height: 1.8; color: #333; margin: 0 !important; background-image: linear-gradient(transparent 95%, #eee 95%); background-size: 100% 3.24rem; background-position: 0 0.4rem;">
+              お子様が「少し背伸びをして届く」進学先を目標にしています。自分の努力に誇りがもてるよう努めます。<br><br>
+              <strong>公立高校:</strong> 明和、向陽、旭野、名東、高蔵寺、長久手、瀬戸西 など<br>
+              <strong>私立高校:</strong> 中京、愛知、金城、名城 など
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div style="background-color: #f9f9f9; padding: 20px 0; margin-top: 10px;">
+      <div style="max-width: 800px; margin: 0 auto; width: 90%;">
+        <h2 style="text-align: center; margin-bottom: 20px; font-weight: 900; font-size: 1.8rem;">中学部についてよくある質問</h2>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          {[
+            {q: "クラスはどうなっていますか？", a: "1クラスに最大８名までの少人数制で、1学年1クラスです。しかし、私立中学コースとの兼ね合いで最大人数は少なくなる可能性があります。"},
+            {q: "学習についていけるか心配です。", a: "少人数制なので、様々なレベルで対応することができます。ゆっくりとできるところから始めます。"},
+            {q: "振替はできますか？", a: "振替はできませんが、お休みの分の授業はフォローいたします。"},
+            {q: "模試はどうなっていますか？", a: "愛知県の入試では内申点が重要なので、中学2年までは模試は行いません。3年生では愛知県模試を受けます。"},
+            {q: "教材費はありますか？", a: "年に一度だけ発生します。"}
+          ].map(faq => (
+            <div style="background: white; padding: 15px 25px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.03);">
+              <p style="font-size: 1.2rem; font-weight: 900; color: #001530; margin:0 !important;">Q. {faq.q}</p>
+              <p style="font-size: 1.1rem; color: #555; margin: 8px 0 0 0 !important; line-height: 1.4;">A. {faq.a}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center; padding: 40px 0;">
+       <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 20px;">
+         <a href="/juken" style="background: #fff; border: 1px solid #001530; color: #001530; padding: 8px 25px; font-size: 1.1rem; border-radius: 50px; font-weight: 800; text-decoration: none;">中学受験コース</a>
+         <a href="/service" style="background: #001530; color: #fff; padding: 8px 25px; font-size: 1.1rem; border-radius: 50px; font-weight: 800; text-decoration: none;">時間割・授業料</a>
+       </div>
+       <p style="font-size: 1.4rem; font-weight: 900; color: #001530; font-style: italic;">"Make it possible with us!"</p>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style is:global>
+  /* 全タグのマージンをリセット */
+  section, div, h2, p, ul, li {
+    margin-top: 0 !important;
+  }
+
+  @media (max-width: 999px) {
+    .n-block { flex-direction: column !important; margin-bottom: 30px !important; }
+    .n-rev { flex-direction: column !important; }
+    .n-col-img, .n-col-txt { width: 100% !important; }
+    .n-col-img { margin-bottom: 15px !important; }
+    h1 { font-size: 1.8rem !important; }
+    h2 { font-size: 1.5rem !important; }
+    .n-text { font-size: 1.6rem !important; background-size: 100% 2.88rem !important; }
+  }
+</style>
