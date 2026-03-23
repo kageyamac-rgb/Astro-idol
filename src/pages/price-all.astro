@@ -1,0 +1,359 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const pageTitle = "授業料・システム詳細 | 鳴滝塾";
+---
+
+<Layout title={pageTitle}>
+  <Header />
+
+  <main class="pricing-details">
+    <div class="container">
+      <div class="page-intro center">
+        <span class="label-orange">PRICING & SYSTEM</span>
+        <h1 class="main-title">授業料・システム詳細</h1>
+        <p class="main-lead">
+          各コースの月謝、および入塾時の諸費用についてご案内します。<br>
+          鳴滝塾は、明瞭で通いやすい料金体系を心がけております。
+        </p>
+      </div>
+
+      <section class="course-block">
+        <div class="block-header">
+          <span class="category-tag orange">小学生</span>
+          <h2>1. 絵解き算数：どんぐり倶楽部（小1〜小6）</h2>
+        </div>
+        
+        <div class="system-desc dot-border-orange">
+          <p class="desc-title">【諸経費・システム】</p>
+          <ul>
+            <li><strong>入塾金：無料</strong> / <strong>年間教材費：無料</strong></li>
+            <li><strong>振替：可能</strong>（事前連絡をいただいた場合に限ります）</li>
+          </ul>
+        </div>
+
+        <div class="scroll-table">
+          <table class="strong-table">
+            <thead>
+              <tr>
+                <th>通塾回数</th>
+                <th>授業時間</th>
+                <th>月謝（税込）</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>週1回（月4回）</td>
+                <td>1時間 / 回</td>
+                <td class="price-text">8,000円</td>
+              </tr>
+              <tr>
+                <td>週2回（月8回）</td>
+                <td>1時間 / 回</td>
+                <td class="price-text">15,000円</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="course-block">
+        <div class="block-header">
+          <span class="category-tag orange">中学受験</span>
+          <h2>2. 中学受験コース（小5・小6）</h2>
+        </div>
+
+        <div class="system-desc dot-border-orange">
+          <p class="desc-title">【諸経費・システム】</p>
+          <ul>
+            <li><strong>入塾金：無料</strong></li>
+            <li><strong>振替：可能</strong>（5年生、および6年生の週4回までの方は事前連絡で振替OK）</li>
+            <li><strong>無料補習：入試前無料補習</strong>を実施します。</li>
+          </ul>
+        </div>
+
+        <div class="scroll-table">
+          <table class="strong-table">
+            <thead>
+              <tr>
+                <th>学年</th>
+                <th>通塾回数</th>
+                <th>年間教材費</th>
+                <th>月謝（税込）</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>小学5年</td>
+                <td>週1回（月4回）</td>
+                <td rowspan="2">12,000円</td>
+                <td class="price-text">15,000円</td>
+              </tr>
+              <tr>
+                <td>小学5年</td>
+                <td>週2回（月8回）</td>
+                <td class="price-text">24,000円</td>
+              </tr>
+              <tr class="highlight-row">
+                <td>小学6年</td>
+                <td>週3〜5回（月最大20回）</td>
+                <td>20,000円</td>
+                <td class="price-text">36,000円</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-caption highlight">※小学6年生は、定額でとことん学べる通い放題システムです。</p>
+      </section>
+
+      <section class="course-block">
+        <div class="block-header">
+          <span class="category-tag navy">中学生</span>
+          <h2>3. 中学生寺子屋（新中1〜新中3）</h2>
+        </div>
+
+        <div class="system-desc dot-border-navy">
+          <p class="desc-title-navy">【諸経費・システム】</p>
+          <ul>
+            <li><strong>入塾金：10,000円</strong> / <strong>振替：不可</strong></li>
+            <li><strong>無料補習：定期テスト前</strong>（3年生は入試前も含む）は無料で徹底サポート。</li>
+          </ul>
+        </div>
+
+        <div class="scroll-table">
+          <table class="strong-table">
+            <thead>
+              <tr>
+                <th>学年</th>
+                <th>授業時間</th>
+                <th>年間教材費</th>
+                <th>月謝（税込）</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>中学1・2年</td>
+                <td>2時間 × 週2回</td>
+                <td>12,000円</td>
+                <td class="price-text">21,000円</td>
+              </tr>
+              <tr>
+                <td>中学3年</td>
+                <td>2時間30分 × 週2回</td>
+                <td>15,000円</td>
+                <td class="price-text">23,000円</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="course-block">
+        <div class="block-header">
+          <span class="category-tag navy">中高一貫</span>
+          <h2>4. 私立中学サポートコース（中1〜中3）</h2>
+        </div>
+
+        <div class="system-desc dot-border-navy">
+          <p class="desc-title-navy">【諸経費・システム】</p>
+          <ul>
+            <li><strong>入塾金：10,000円</strong>（※小学生から継続の場合は<strong>無料</strong>）</li>
+            <li><strong>月謝特典：2,000円 OFF</strong>（小学生から通っている場合）</li>
+            <li><strong>振替：可能</strong>（事前連絡により振替授業が受けられます）</li>
+            <li><strong>無料補習：定期テスト前無料補習</strong>あり。</li>
+          </ul>
+        </div>
+
+        <div class="scroll-table">
+          <table class="strong-table">
+            <thead>
+              <tr>
+                <th>対象</th>
+                <th>授業時間</th>
+                <th>年間教材費</th>
+                <th>月謝（税込）</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>中学1〜3年</td>
+                <td>2時間 × 週2回</td>
+                <td>12,000円</td>
+                <td class="price-text">24,000円</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="course-block">
+        <div class="block-header">
+          <span class="category-tag gray">高校生</span>
+          <h2>5. 高校別サポートコース（高1〜高3）</h2>
+        </div>
+
+        <div class="system-desc dot-border-gray">
+          <p class="desc-title-gray">【諸経費・システム】</p>
+          <ul>
+            <li><strong>入塾金：10,000円</strong>（※小・中学から継続の場合は<strong>無料</strong>）</li>
+            <li><strong>月謝特典：2,000円 OFF</strong>（小または中で通っていた場合）</li>
+            <li><strong>振替：可能</strong>（事前連絡により振替授業が受けられます）</li>
+            <li><strong>無料補習：定期テスト前</strong>（3年生は入試前も含む）は無料補習。</li>
+          </ul>
+        </div>
+
+        <div class="scroll-table">
+          <table class="strong-table">
+            <thead>
+              <tr>
+                <th>学年</th>
+                <th>授業時間</th>
+                <th>年間教材費</th>
+                <th>月謝（税込）</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>高校1・2年</td>
+                <td>2時間 × 週2回</td>
+                <td>12,000円</td>
+                <td class="price-text">27,000円</td>
+              </tr>
+              <tr>
+                <td>高校3年</td>
+                <td>2～4時間 × 週2回</td>
+                <td>15,000円</td>
+                <td class="price-text">36,000円</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <div class="center back-action">
+        <a href="/" class="button large-btn">トップページへ戻る</a>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style lang="scss">
+  .pricing-details {
+    padding-top: 100px;
+    padding-bottom: 120px;
+    background-color: #f8f9fb;
+    color: #222;
+  }
+
+  .page-intro {
+    margin-bottom: 60px;
+    .label-orange { color: #d35400; font-weight: 800; font-size: 1.4rem; letter-spacing: 0.1em; }
+    .main-title { font-size: 3.6rem; font-weight: 900; color: #001530; margin: 15px 0; }
+    .main-lead { font-size: 1.8rem; color: #555; line-height: 1.8; }
+  }
+
+  .course-block {
+    background: #ffffff;
+    padding: 45px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    margin-bottom: 70px;
+
+    .block-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 25px;
+      h2 { font-size: 2.8rem; margin: 0; color: #001530; font-weight: 800; }
+      .category-tag {
+        padding: 5px 12px; border-radius: 5px; font-size: 1.2rem; color: #fff; font-weight: bold;
+        &.orange { background: #d35400; }
+        &.navy { background: #001530; }
+        &.gray { background: #7f8c8d; }
+      }
+    }
+  }
+
+  .system-desc {
+    padding: 35px;
+    border-radius: 20px;
+    margin-bottom: 35px;
+    
+    &.dot-border-orange { background: #fffaf7; border: 3px dotted #d35400; }
+    &.dot-border-navy { background: #f4f7fa; border: 3px dotted #001530; }
+    &.dot-border-gray { background: #f9f9f9; border: 3px dotted #7f8c8d; }
+
+    .desc-title { font-size: 2.2rem; font-weight: 900; color: #d35400; margin-bottom: 15px; }
+    .desc-title-navy { font-size: 2.2rem; font-weight: 900; color: #001530; margin-bottom: 15px; }
+    .desc-title-gray { font-size: 2.2rem; font-weight: 900; color: #555; margin-bottom: 15px; }
+
+    ul { 
+      list-style: none; margin: 0; padding: 0; 
+      li {
+        font-size: 2.0rem;
+        line-height: 1.7;
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 12px;
+        font-weight: 700;
+        &::before {
+          content: "✔"; position: absolute; left: 0; color: inherit; font-size: 1.8rem; top: -0.1rem;
+        }
+      }
+    }
+  }
+
+  .scroll-table { overflow-x: auto; }
+  .strong-table {
+    width: 100%; border-collapse: collapse; background: #fff; border: 2px solid #001530;
+    th { background: #001530; color: #fff; padding: 18px; font-size: 1.7rem; border: 1px solid #001530; }
+    td { padding: 18px; border: 1px solid #dee2e6; text-align: center; font-size: 1.8rem; color: #111; }
+    
+    .price-text { 
+      color: #d35400; 
+      font-weight: 900; 
+      font-size: 2.4rem;
+    }
+
+    .highlight-row {
+      background: #fff3e8;
+      td { border-top: 2px solid #d35400; border-bottom: 2px solid #d35400; color: #d35400; font-weight: 900; }
+      .important-text { font-size: 2.2rem; }
+    }
+  }
+
+  .table-caption {
+    &.highlight {
+      font-size: 2.8rem;
+      color: #001530;
+      margin-top: 25px;
+      margin-bottom: 20px;
+      font-weight: 900;
+      line-height: 1.4;
+      background: #fff; 
+      padding: 15px 10px;
+      border-left: 10px solid #d35400;
+    }
+  }
+
+  .back-action { margin-top: 60px; }
+  .large-btn { 
+    background: #001530; color: #fff; padding: 18px 50px; 
+    font-size: 1.8rem; border-radius: 50px; text-decoration: none; font-weight: 800;
+    display: inline-block; transition: 0.3s;
+    &:hover { background: #d35400; }
+  }
+
+  @media (max-width: 768px) {
+    .course-block { padding: 25px 15px; }
+    .main-title { font-size: 2.6rem; }
+    .system-desc li { font-size: 1.8rem; }
+    .table-caption.highlight { font-size: 2.0rem; border-left-width: 5px; }
+    td, th { padding: 12px 8px; font-size: 1.4rem; }
+    .price-text { font-size: 1.8rem; }
+  }
+</style>
