@@ -1,422 +1,166 @@
 ---
-
+// hero.astro
 import Feat1 from '../assets/etokisansu-lp.png'
-
 import Feat2 from '../assets/chugakujuken-lp.png'
-
 import Feat3 from '../assets/terakoyashiki-lp.png'
-
 import Feat4 from '../assets/testtaisaku-lp.png'
-
 import Feat5 from '../assets/kaikei-lp.png'
-
 ---
 
+<section class="nj-ultimate-hero">
+  <div class="nj-hero-canvas">
+    
+    <div class="nj-text-block">
+      <h1 class="nj-title">一人ひとりを大切にして、考える力をはぐくむ少人数制の学習塾</h1>
+      <h2 class="nj-sub-header">
+        <span class="nj-caption">絵解き算数教室「どんぐり倶楽部準拠教室」</span><br />
+        鳴滝塾
+      </h2>
+      
+      <p class="nj-description">
+        鳴滝塾はリニューアル。新しい3つのコースが始まります。<br />
+        <strong class="nj-orange">小5からの中学受験 / 私立中学生コース / 通塾してない高校生</strong><br />
+        移転し新しくなった教室で、考える力を育む時間を共に過ごしましょう。
+      </p>
 
-
-
-
-<section class="product-hero">
-
-    <div class="container">
-
-        <div class="d-table">
-
-            <div class="d-table-cell center">
-
-                <div class="hero-copy">
-
-                    <h1 class="h1-title">一人ひとりを大切にして、考える力をはぐくむ少人数制の学習塾</h1>
-
-                     <h2 class="hero-sub-header">
-
-                     <span class="sub-caption">絵解き算数教室「どんぐり倶楽部準拠教室」</span><br />
-
-                     鳴滝塾
-
-                     </h2>
-
-                   
-
-                    <p class="hero-description">
-
-                    鳴滝塾はリニューアル。新しい3つのコースが始まります。<br />
-
-                    <strong>小5からの中学受験 / 私立中学生コース / 通塾してない高校生</strong><br />
-
-                    移転し新しくなった教室で、考える力を育む時間を共に過ごしましょう。
-
-                    </p>
-
-                   
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="hero-media">
-
-        <img src={Feat1.src} alt="強み1">
-
-        <img src={Feat2.src} alt="強み2">
-
-        <img src={Feat3.src} alt="強み3">
-
-        <img src={Feat4.src} alt="強み4">
-
-        <img src={Feat5.src} alt="強み5">
-
-        </div>
-
+      <div class="nj-cta">
+        <a href="#contact" class="nj-btn">まずは無料体験授業 →</a>
+      </div>
     </div>
 
- </section>
-
-
-
- <style lang="scss">
-
-
-
-.hero-sub-header {
-
-    font-size: 3.8rem;    // 「鳴滝塾」をさらに大きく
-
-    font-weight: 800;
-
-    margin-top: 30px;     // 上のキャッチコピーとの間隔を少し広げて独立させる
-
-    line-height: 1.0;     // 行間を極限まで詰める
-
-    color: #111;
-
-    letter-spacing: -0.02em; // 少し文字の間を詰めて密度を上げる
-
-
-
-    .sub-caption {
-
-      display: block;    
-
-      font-size: 1.8rem;  // ★ここを大きく（前の1.3倍ほど）
-
-      font-weight: 600;   // ★少し太くして視認性をアップ
-
-      color: #444;        // 少しだけ濃い色に
-
-      margin-bottom: -12px; // ★もっとマイナスにして「鳴滝塾」へ引き寄せる
-
-      letter-spacing: 0.05em; // 肩書きは少し広げて読みやすく
-
-    }
-
-  }
-
-
-
-.hero-description {
-
-    font-size: 1.4rem;      // ★1.2から1.4へ。しっかり読める大きさに
-
-    line-height: 1.7;       // 行間も少しだけ広げてゆとりを持たせます
-
-    margin-top: 35px;       // 「鳴滝塾」との間隔を広げて、文章を独立させます
-
-    color: #222;            // 少しだけ濃くして読みやすく
-
-    font-weight: 500;       // 全体的に少しだけ太くします
-
-   
-
-    strong {
-
-      font-size: 1.5rem;    // ★オレンジの強調箇所をさらに一回り大きく
-
-      color: #d35400;      
-
-      font-weight: 800;     // 強調箇所は思いっきり太く
-
-    }
-
-
-
-    @media (max-width: 700px) {
-
-      font-size: 1.1rem;    // スマホでも小さくなりすぎないように調整
-
-     
-
-      strong {
-
-        font-size: 1.2rem;
-
-      }
-
-    }
-
-  }
-
-
-
-.hero-media {
-
-    img {
-
-      position: absolute;
-
-      // width: 160px; // 全体共通の指定はコメントアウトするか消します
-
-      height: auto;   // アスペクト比を維持
-
-
-
-      &:nth-child(1) { // 強み1：絵解き算数（左上）
-
-        top: 0;
-
-        left: -100px;
-
-        width: 180px;  // ★ここでお好みのサイズに！
-
-      }
-
-      &:nth-child(2) { // 強み2：個別フォロー（右上）
-
-        top: 0;
-
-        right: -100px;
-
-        width: 150px;  // ★ここでお好みのサイズに！
-
-      }
-
-      &:nth-child(3) { // 強み3（左中段）
-
-        top: 250px;
-
-        left: 0;
-
-        width: 160px;
-
-      }
-
-      &:nth-child(4) { // 強み4（右中段）
-
-        top: 250px;
-
-        right: 0;
-
-        width: 160px;
-
-      }
-
-      &:nth-child(5) { // 強み5（中央下）
-
-        bottom: -20px;
-
-        left: 50%;
-
-        transform: translateX(-50%);
-
-        width: 200px;  // ★真ん中下は少し大きくする、なども自由自在
-
-      }
-
-    }
-
-
-
-    // スマホ表示での調整（画像が大きすぎると重なるため）
-
-    @media (max-width:700px) {
-
-      img {
-
-        &:nth-child(1) { width: 120px; left: -20px; } // スマホ用に小さく
-
-        &:nth-child(5) { width: 140px; }
-
-       
-
-        &:nth-child(2), &:nth-child(3), &:nth-child(4) {
-
-          display: none; // 元のソースの通り、スマホでは一部非表示
-
-        }
-
-      }
-
-    }
-
-  }  
-
-
-
-.product-hero{
-
-  padding: 50px 0;
-
-  .container{
-
-    position: relative;
-
-    .d-table{
-
-      height: 500px;
-
-     }
-
-  }
-
-  .hero-media{
-
-    padding: 5px;
-
-    border-radius: 48px;
-
-  }
-
-  .hero-copy{
-
-    h1, p{
-
-      max-width: 600px;
-
-      margin: 20px auto;
-
-    }
-
-  }
-
-  .hero-media{
-
-    img{
-
-      position: absolute;
-
-      width: 160px;
-
-      &:nth-child(1){
-
-        top: 0;
-
-        left: -100px;
-
-      }
-
-      &:nth-child(2){
-
-        top: 0;
-
-        right: -100px;
-
-      }
-
-      &:nth-child(3){
-
-        top: 250px;
-
-        left: 0;
-
-      }
-
-      &:nth-child(4){
-
-        top: 250px;
-
-        right: 0;
-
-      }
-
-      &:nth-child(5){
-
-        bottom: -20px;
-
-        left: 50%;
-
-        transform: translateX(-50%);
-
-      }
-
-    }
-
-    @media (max-width:700px) {
-
-      img{
-
-        &:nth-child(2), &:nth-child(3),
-
-        &:nth-child(4){
-
-          display: none;
-
-        }
-
-      }
-
-    }
-
-  }
-
+    <div class="nj-image-group">
+      <img src={Feat1.src} alt="強み1" class="nj-img nj-i1">
+      <img src={Feat2.src} alt="強み2" class="nj-img nj-i2">
+      <img src={Feat3.src} alt="強み3" class="nj-img nj-i3">
+      <img src={Feat4.src} alt="強み4" class="nj-img nj-i4">
+      <img src={Feat5.src} alt="強み5" class="nj-img nj-i5">
+    </div>
+
+  </div>
+</section>
+
+<style lang="scss">
+/* ============================================================
+   【基本設定】
+============================================================ */
+.nj-ultimate-hero {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  overflow: hidden;
+  padding: 100px 0 !important; // ヘッダーとの隙間
 }
 
-.product-cta {
-  margin: 40px auto;
-  text-align: center; // 中央寄せ
+.nj-hero-canvas {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .btn-hero-trial {
-    display: inline-flex; // 文字幅に合わせる（横に広がらない）
+/* 中央の文字エリア（絶対に画像に負けない設定） */
+.nj-text-block {
+  position: relative;
+  z-index: 999; /* 他の全てより手前に */
+  max-width: 600px;
+  text-align: center;
+}
+
+.nj-title { font-size: 2.2rem; font-weight: 800; color: #001530; margin-bottom: 20px; line-height: 1.4; }
+.nj-sub-header {
+  font-size: 4rem; font-weight: 900; line-height: 1; margin: 30px 0;
+  .nj-caption { display: block; font-size: 1.6rem; color: #444; margin-bottom: -10px; }
+}
+.nj-description { font-size: 1.4rem; line-height: 1.8; color: #333; .nj-orange { color: #d35400; font-weight: 800; } }
+
+/* ============================================================
+   【PC版：1000px以上】画像を散らす
+============================================================ */
+@media (min-width: 1000px) {
+  .nj-image-group {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none;
+  }
+
+  .nj-img {
+    position: absolute !important;
+    display: block !important;
+    height: auto !important;
+    z-index: 10;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
+    transform: none !important; /* 回転を禁止 */
+
+    /* サイズを px で強制固定（Skeletonに負けない） */
+    &.nj-i1 { top: 0; left: 0; width: 180px !important; }         // 左上
+    &.nj-i2 { top: 0; right: 0; width: 180px !important; }        // 右上
+    &.nj-i3 { bottom: 120px; left: 20px; width: 160px !important; }  // 左下
+    &.nj-i4 { bottom: 120px; right: 20px; width: 160px !important; } // 右下
+    
+    // 一番下の画像：ボタンと被らないようにさらに下げる
+    &.nj-i5 { 
+      bottom: -100px; 
+      left: 50%; 
+      transform: translateX(-50%) !important; 
+      width: 240px !important; 
+    }
+  }
+}
+
+/* ボタン装飾 */
+.nj-btn {
+  display: inline-block;
+  background-color: #d35400;
+  color: #fff !important;
+  padding: 16px 45px;
+  border-radius: 50px;
+  font-weight: 800;
+  font-size: 1.3rem;
+  text-decoration: none;
+  box-shadow: 0 10px 20px rgba(211, 84, 0, 0.2);
+  margin-top: 20px;
+}
+
+/* ============================================================
+   【スマホ版：999px以下】縦並びに切り替え
+============================================================ */
+@media (max-width: 999px) {
+  .nj-ultimate-hero { padding: 100px 20px 60px !important; }
+
+  .nj-hero-canvas {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .nj-text-block {
+    max-width: 100%;
+    margin-bottom: 50px;
+  }
+
+  /* 文字サイズ調整 */
+  .nj-title { font-size: 1.8rem; }
+  .nj-sub-header { font-size: 3rem; .nj-caption { font-size: 1.3rem; } }
+
+  /* 画像を絶対配置から「解除」して縦に並べる（巨大化防止） */
+  .nj-image-group {
+    position: static;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 15px;
-    
-    // サイズ設定
-    width: auto;
-    min-width: 320px;     // ボタンの存在感を出すための最低幅
-    padding: 18px 45px;
-    
-    // デザイン設定
-    background-color: #d35400; // 鳴滝塾のイメージカラー（オレンジ系）
-    color: #fff;
-    text-decoration: none;
-    font-weight: 800;
-    font-size: 1.4rem;
-    border-radius: 50px;       // カプセル型
-    
-    // 影とアニメーション
-    box-shadow: 0 10px 20px rgba(211, 84, 0, 0.2);
-    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    gap: 30px;
+    width: 100%;
 
-    .btn-text {
-      position: relative;
-    }
-
-    .btn-arrow {
-      transition: transform 0.4s ease;
-      display: flex;
-      align-items: center;
-    }
-
-    &:hover {
-      background-color: #e67e22; // ホバー時に少し明るく
-      transform: translateY(-3px);
-      box-shadow: 0 15px 30px rgba(211, 84, 0, 0.3);
-      color: #fff; // リンクの色が変わらないように固定
-
-      .btn-arrow {
-        transform: translateX(8px);
-      }
-    }
-
-    @media (max-width: 700px) {
-      width: 100%;       // スマホでは押しやすいように全幅
-      min-width: unset;
-      padding: 15px 20px;
-      font-size: 1.2rem;
+    .nj-img {
+      position: static !important;
+      transform: none !important;
+      width: 85% !important; /* スマホ画面に合わせる */
+      max-width: 280px !important; /* 巨大化を物理的に阻止 */
+      margin: 0 auto;
     }
   }
 }
-
- </style>
+</style>
