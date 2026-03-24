@@ -1,6 +1,6 @@
 ---
 // LINE公式アカウントのURL
-const lineUrl = "https://line.me/R/ti/p/@あなたのLINE_ID";
+const lineUrl = "https://line.me/R/ti/p/@YourID";
 ---
 
 <section class="contact-section" id="contact">
@@ -31,8 +31,12 @@ const lineUrl = "https://line.me/R/ti/p/@あなたのLINE_ID";
           <p class="reply-guide">
             ※通常、<strong>2日以内</strong>に返信いたします。万が一返信がない場合は、お手数ですが下記より直接メールの再送をお願いいたします。
           </p>
-          <div class="mail-unlock-area">
-            <button id="unlock-mail" class="unlock-mail-btn" type="button">📩 直接メールアドレスを表示する</button>
+          
+          <div class="unlock-wrapper">
+            <button id="unlock-mail" class="unlock-btn mail-type" type="button">
+              <span class="btn-icon">📩</span>
+              <span class="btn-text">直接メールアドレスを表示する</span>
+            </button>
             <div id="mail-output"></div>
           </div>
         </div>
@@ -80,8 +84,12 @@ const lineUrl = "https://line.me/R/ti/p/@あなたのLINE_ID";
           授業中などはお電話に出られない場合がございます。<br/>
           お電話は 10:00から20:00の間におかけください。
         </p>
-        <div class="tel-unlock-area">
-          <button id="unlock-tel" class="unlock-btn" type="button">📞 電話番号を表示する</button>
+        
+        <div class="unlock-wrapper">
+          <button id="unlock-tel" class="unlock-btn tel-type" type="button">
+            <span class="btn-icon">📞</span>
+            <span class="btn-text">電話番号を表示する</span>
+          </button>
           <div id="tel-output"></div>
         </div>
       </div>
@@ -92,12 +100,12 @@ const lineUrl = "https://line.me/R/ti/p/@あなたのLINE_ID";
 
 <script is:inline>
   document.addEventListener('DOMContentLoaded', () => {
-    // 電話
+    // 電話表示ロジック
     const telBtn = document.getElementById('unlock-tel');
     if (telBtn) {
       telBtn.addEventListener('click', function() {
-        const a = "042"; // 実際の番号に
-        const b = "400"; 
+        const a = "042"; // 塾の番号に書き換え
+        const b = "XXX"; 
         const c = "XXXX"; 
         const telNum = a + "-" + b + "-" + c;
         const output = document.getElementById('tel-output');
@@ -105,7 +113,7 @@ const lineUrl = "https://line.me/R/ti/p/@あなたのLINE_ID";
         this.style.display = 'none';
       });
     }
-    // メール
+    // メール表示ロジック
     const mailBtn = document.getElementById('unlock-mail');
     if (mailBtn) {
       mailBtn.addEventListener('click', function() {
@@ -121,45 +129,95 @@ const lineUrl = "https://line.me/R/ti/p/@あなたのLINE_ID";
 </script>
 
 <style>
+  /* 全体設定 */
   .contact-section { padding: 100px 20px; background-color: #f4f7f9; }
   .contact-container { max-width: 800px; margin: 0 auto; font-family: sans-serif; }
   .contact-title { text-align: center; font-size: 2.2rem; color: #001530; margin-bottom: 10px; font-weight: 800; }
   .contact-lead { text-align: center; margin-bottom: 50px; color: #555; font-weight: 600; }
   .contact-stack { display: flex; flex-direction: column; gap: 40px; }
 
-  .method-card { background: #fff; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+  /* カードデザイン */
+  .method-card { background: #fff; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); position: relative; }
   .line-border { border: 3px solid #06c755; text-align: center; }
   .mail-border { border: 1px solid #eee; }
   .tel-border { text-align: center; border: 1px solid #eee; }
 
-  .recommend-badge { background: #06c755; color: #fff; padding: 4px 12px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; display: inline-block; }
-  .line-h3 { color: #06c755; font-size: 1.8rem; margin: 15px 0; font-weight: 800; line-height: 1.4; }
+  .recommend-badge { background: #06c755; color: #fff; padding: 4px 12px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; display: inline-block; margin-bottom: 10px; }
+  .line-h3 { color: #06c755; font-size: 1.8rem; margin: 0 0 15px 0; font-weight: 800; line-height: 1.4; }
   .mail-h3 { font-size: 1.6rem; margin-bottom: 25px; border-left: 6px solid #d35400; padding-left: 15px; color: #001530; font-weight: 800; }
   .tel-h3 { display: inline-block; font-size: 1.6rem; margin-bottom: 25px; color: #001530; font-weight: 800; padding-bottom: 8px; border-bottom: 3px dotted #d35400; }
 
   .method-desc { font-weight: 600; margin-bottom: 25px; line-height: 1.7; color: #333; }
   .notice-box { background: #fff5ee; border: 1px solid #ffccaa; padding: 25px; border-radius: 12px; margin-bottom: 30px; font-size: 1rem; color: #333; }
-  .notice-box strong { color: #d35400; }
   .reply-guide { margin-top: 15px; padding-top: 15px; border-top: 1px dashed #ffccaa; }
 
+  /* フォームパーツ */
   .input-row { margin-bottom: 25px; text-align: left; }
   .form-label { display: block; font-weight: 800; margin-bottom: 10px; color: #333; }
   .form-label span { color: #d35400; font-size: 0.8rem; margin-left: 8px; }
   .form-control { width: 100%; padding: 14px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; box-sizing: border-box; }
 
-  .btn-wrapper { text-align: center; margin-top: 20px; }
-  .line-round-btn, .mail-round-btn {
-    display: inline-flex; align-items: center; justify-content: center; width: 100%; max-width: 400px;
-    padding: 18px 40px; border-radius: 50px; font-size: 1.3rem; font-weight: 800; text-decoration: none; border: none; cursor: pointer; transition: 0.3s;
+  /* ★ボタン配置用ラッパー */
+  .btn-wrapper, .unlock-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    min-height: 60px;
   }
-  .line-round-btn { background-color: #06c755; color: #fff; box-shadow: 0 4px 15px rgba(6, 199, 85, 0.3); }
-  .mail-round-btn { background-color: #d35400; color: #fff; box-shadow: 0 4px 15px rgba(211, 84, 0, 0.3); }
-  .line-round-btn:hover, .mail-round-btn:hover { transform: translateY(-3px); opacity: 0.9; }
 
-  .tel-unlock-area { margin-top: 20px; display: flex; justify-content: center; align-items: center; min-height: 80px; }
-  .unlock-btn, .unlock-mail-btn { background: #f8f8f8; border: 1px solid #ddd; padding: 12px 30px; border-radius: 50px; font-weight: 800; cursor: pointer; transition: 0.2s; }
-  .unlock-mail-btn { border-color: #d35400; color: #d35400; font-size: 1.1rem; margin-top: 10px; }
+  /* ★共通ボタンベース：flexboxで中央固定 */
+  .line-round-btn, .mail-round-btn, .unlock-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px;
+    height: 60px !important;
+    padding: 0 40px !important;
+    border-radius: 50px !important;
+    font-weight: 800 !important;
+    text-decoration: none !important;
+    cursor: pointer;
+    transition: 0.3s;
+    line-height: 1 !important; /* 行間の干渉をリセット */
+    box-sizing: border-box !important;
+    border: none;
+  }
 
+  .line-round-btn { background-color: #06c755; color: #fff; font-size: 1.3rem; width: 100%; max-width: 420px; box-shadow: 0 4px 15px rgba(6, 199, 85, 0.3); }
+  .mail-round-btn { background-color: #d35400; color: #fff; font-size: 1.3rem; width: 100%; max-width: 420px; box-shadow: 0 4px 15px rgba(211, 84, 0, 0.3); }
+
+  /* ★「表示する」ボタンの個別調整 */
+  .unlock-btn {
+    background: #fdfdfd;
+    border: 1px solid #ddd !important;
+    color: #333;
+    font-size: 1.1rem;
+    min-width: 300px;
+  }
+  .unlock-btn.mail-type { border-color: #d35400 !important; color: #d35400; }
+
+  /* ★アイコン・テキストそれぞれのズレ補正 */
+  .btn-icon {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    /* 絵文字が上にズレて見える場合の微調整用 */
+    transform: translateY(1px); 
+  }
+  .btn-text {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+  }
+
+  .line-round-btn:hover, .mail-round-btn:hover, .unlock-btn:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+  }
+
+  /* 結果表示 */
   :global(.real-tel) { display: block; font-size: 2.5rem; font-weight: 900; color: #001530; text-decoration: none; line-height: 1.2; animation: fadeIn 0.4s ease-out; }
   :global(.real-mail) { display: inline-block; font-size: 1.8rem; font-weight: 900; color: #d35400; text-decoration: underline; margin-top: 10px; animation: fadeIn 0.4s ease-out; }
 
@@ -167,7 +225,9 @@ const lineUrl = "https://line.me/R/ti/p/@あなたのLINE_ID";
 
   @media (max-width: 768px) {
     .contact-title { font-size: 1.8rem; }
-    .line-round-btn, .mail-round-btn { font-size: 1.15rem; }
+    .method-card { padding: 30px 20px; }
+    .line-round-btn, .mail-round-btn { font-size: 1.1rem; height: 54px !important; }
+    .unlock-btn { font-size: 1rem; height: 50px !important; min-width: 260px; padding: 0 20px !important; }
     :global(.real-tel) { font-size: 1.8rem; }
     :global(.real-mail) { font-size: 1.4rem; }
   }

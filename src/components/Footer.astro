@@ -1,74 +1,213 @@
 ---
-import LinkedIn from '../assets/linkedin.svg'
-import Twitter from '../assets/twitter.svg'
-const link = `https://github.com/LaB-CH3/Astro-idol`
-
+// サイトマップのデータ定義（「お知らせ」と「ご案内」を統合）
+const sitemap = [
+  {
+    title: "学習コース",
+    links: [
+      { name: "小学生絵解き算数「どんぐり倶楽部」", href: "/donguri" },
+      { name: "小学5,6年中学受験コース", href: "/chugakujuken" },
+      { name: "中学生学習塾寺子屋式", href: "/chugakuterakoya" },
+      { name: "私立中学サポートコース", href: "/shiritsuchugaku" },
+      { name: "高校別サポートコース", href: "/highschool" },
+    ],
+  },
+  {
+    title: "塾について",
+    links: [
+      { name: "鳴滝塾の想い", href: "/message" },
+      { name: "鳴滝塾について", href: "/about" },
+      { name: "よくある質問", href: "/FAQ-all" },
+    ],
+  },
+  {
+    title: "お知らせ・ご案内",
+    links: [
+      { name: "最新のお知らせ", href: "/information" },
+      { name: "授業料", href: "/price-all" },
+      { name: "時間割", href: "/Timetable-all" },
+      { name: "プライバシーポリシー", href: "/privacy" },
+    ],
+  },
+];
 ---
 
 <footer>
-    <div class="container row">
-        <div class="footer-link flex js one-half column">
-            <a href="#">About</a> <a href="#">Help Center</a>
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a> 
+  <div class="container row">
+    <div class="footer-left one-third column">
+      <div class="brand-wrapper">
+        <a href="/" class="logo-link">
+          <img src="/narutaki-logo.svg" alt="なるたき塾 ロゴ" class="footer-logo" />
+        </a>
+        
+        <div class="brand-info">
+          <p class="copyright">narutakijuku all rights reserved</p>
+          <p class="tech-info">Astro & Astridol</p>
         </div>
-        <div class="footer-note one-half column">
-            <div class="u-pull-right">
-                <div class="flex">
-                    <p>© Idol 2023</p>
-                    <a href="#"><img src={Twitter.src} alt="Twitter icon"></a>
-                    <a href="#"><img src={LinkedIn.src} alt="Linkedin icon"></a>
-                </div>
-            </div>
+
+        <div class="contact-area">
+          <a href="https://line.me/R/ti/p/@YourID" target="_blank" rel="noopener noreferrer" class="line-btn">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="line-icon">
+              <path d="M19.365 9.863c.064.433.1.88.1 1.337 0 3.443-3.21 6.244-7.165 6.244-1.127 0-2.188-.231-3.13-.642l-2.454.724c-.13.039-.258.044-.367-.003-.122-.053-.195-.164-.195-.297l.035-2.008c-1.251-1.103-2.031-2.601-2.031-4.262C4.163 7.513 7.373 4.712 11.328 4.712c3.954 0 7.165 2.801 7.165 6.244l-.128-1.093zM8.887 12.016h-.995a.301.301 0 0 0-.301.301v2.103c0 .166.135.301.301.301h.995a.301.301 0 0 0 .301-.301v-.152h-.694v-1.802h.694v-.15a.301.301 0 0 0-.301-.301zm2.345 0h-.995a.301.301 0 0 0-.301.301v2.103c0 .166.135.301.301.301h.995a.301.301 0 0 0 .301-.301v-2.103a.301.301 0 0 0-.301-.301zm2.344 0h-.994a.301.301 0 0 0-.301.301v2.103c0 .166.135.301.301.301h.994a.301.301 0 0 0 .301-.301v-2.103a.301.301 0 0 0-.301-.301zm2.345 0h-.995a.301.301 0 0 0-.301.301v2.103c0 .166.135.301.301.301h.995a.301.301 0 0 0 .301-.301v-2.103a.301.301 0 0 0-.301-.301z" fill="currentColor"/>
+            </svg>
+            <span>LINEでお問い合わせ</span>
+          </a>
         </div>
+      </div>
     </div>
+
+    <div class="footer-right two-thirds column">
+      <div class="sitemap-grid">
+        {sitemap.map((section) => (
+          <div class="sitemap-section">
+            <h4 class="sitemap-title">{section.title}</h4>
+            <ul>
+              {section.links.map((link) => (
+                <li><a href={link.href}>{link.name}</a></li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
 </footer>
 
 <style lang="scss">
-  .flex{
-    display: flex;;
-  }
-footer{
-    padding: 40px 0;
+  footer {
+    padding: 100px 0 80px;
     background-color: #fff;
+    // 細身のフォント設定
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    font-weight: 300; 
 
-    a, p{
-      color: #222;
-      font-size: 1.8rem;
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
     }
-    .footer-link a{
-      padding-right: 20px;
-      text-decoration: none;
+
+    // 左：ブランドエリア
+    .footer-left {
+      .footer-logo {
+        width: 180px;
+        margin-bottom: 20px;
+        display: block;
+      }
+      .brand-info {
+        margin-bottom: 40px;
+        .copyright {
+          font-size: 1.2rem;
+          color: #333;
+          margin: 0;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+        }
+        .tech-info {
+          font-size: 1rem;
+          color: #bbb;
+          margin: 4px 0 0 0;
+          letter-spacing: 0.1em;
+        }
+      }
+      .line-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background-color: #06C755;
+        color: #fff;
+        padding: 12px 28px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-size: 1.4rem;
+        font-weight: 400;
+        transition: all 0.3s ease;
+        &:hover {
+          opacity: 0.8;
+          transform: translateY(-2px);
+        }
+        .line-icon {
+          width: 20px;
+          height: 20px;
+        }
+      }
     }
-    .container{
-      padding: 30px;
-      border-radius: 50px;
-      
-      .footer-note{
-        a{
-          padding-left: 20px;
-          img{
-            width: 28px;
-            @media (max-width: 700px) {
-              width: 20px;
+
+    // 右：サイトマップエリア
+    .footer-right {
+      .sitemap-grid {
+        display: grid;
+        // 3つのカテゴリーを並べる
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      .sitemap-title {
+        font-size: 1.4rem;
+        font-weight: 500;
+        margin-bottom: 25px;
+        color: #000;
+        letter-spacing: 0.05em;
+        position: relative;
+        padding-bottom: 10px;
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 20px;
+          height: 1px;
+          background: #333;
+        }
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        li {
+          margin-bottom: 15px;
+          line-height: 1.5;
+          a {
+            font-size: 1.25rem;
+            color: #666;
+            text-decoration: none;
+            transition: color 0.2s;
+            &:hover {
+              color: #000;
+              text-decoration: underline;
             }
           }
         }
       }
     }
-    @media (max-width:700px) {
-      p, a{
-        font-size: 1.5rem;
+
+    // レスポンシブ対応
+    @media (max-width: 900px) {
+      .footer-right .sitemap-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 20px;
       }
-        .flex{
-            justify-content: center;
+    }
+
+    @media (max-width: 700px) {
+      padding: 60px 0;
+      text-align: center;
+      .footer-left, .footer-right {
+        width: 100%;
+        float: none;
+      }
+      .footer-left {
+        margin-bottom: 60px;
+        .footer-logo { margin: 0 auto 20px; }
+      }
+      .footer-right {
+        .sitemap-grid {
+          grid-template-columns: 1fr;
+          text-align: left;
+          max-width: 280px;
+          margin: 0 auto;
         }
-        .column{
-            padding: 10px 0;
+        .sitemap-title::after {
+          left: 0;
         }
-        .u-pull-right{
-            float: none;
-        }
+      }
     }
   }
 </style>
