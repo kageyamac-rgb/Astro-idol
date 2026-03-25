@@ -12,9 +12,15 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="description" content="鳴滝塾 - 尾張旭市の少人数制学習塾">
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
   </head>
   <body>
@@ -36,7 +42,7 @@ const { title } = Astro.props;
     font-family: var(--base-font);
     margin: 0px;
     scroll-behavior: smooth;
-    /* 背景のグラデーションが About ページの真っ白と干渉する場合は調整してください */
+    /* 背景のグラデーション */
     background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
     color: #333;
   }
@@ -48,14 +54,14 @@ const { title } = Astro.props;
     margin-bottom: 1.5rem;
   }
 
-  /* 見出しのサイズ感を調整（Aboutページのh2: 2.2rem等と喧嘩しないように） */
+  /* 見出しのサイズ感を調整 */
   .h1-title {
     font-size: 4rem;
     font-weight: 700;
     color: var(--dark);
   }
   .h2-title {
-    font-size: 2.8rem; /* 少しだけ抑える */
+    font-size: 2.8rem;
     font-weight: 700;
     color: var(--dark);
   }
@@ -69,9 +75,13 @@ const { title } = Astro.props;
     height: auto;
     padding: 10px 30px;
     line-height: 1.5;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    
     &.button-primary {
       background: var(--accent);
-      border: var(--accent);
+      border: 1px solid var(--accent);
       color: #fff;
     }
     &:hover {
@@ -88,7 +98,10 @@ const { title } = Astro.props;
   }
 
   /* ヘルパークラス */
-  .flex { display: flex; &.center { justify-content: center; } }
+  .flex { 
+    display: flex; 
+    &.center { justify-content: center; } 
+  }
   .block { display: block; }
 
 </style>
